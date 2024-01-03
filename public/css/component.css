@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: 'Hero';
+  src: url('../fonts/Hero.eot');
+  src: url('../fonts/Hero.eot') format('embedded-opentype'),
+       url('../fonts/Hero.woff2') format('woff2'),
+       url('../fonts/Hero.woff') format('woff'),
+       url('../fonts/Hero.ttf') format('truetype'),
+       url('../fonts/Hero.svg#Hero') format('svg');
+}
+@font-face {
+  font-family: 'HeroLight';
+  src: url('../fonts/HeroLight.eot');
+  src: url('../fonts/HeroLight.eot') format('embedded-opentype'),
+       url('../fonts/HeroLight.woff2') format('woff2'),
+       url('../fonts/HeroLight.woff') format('woff'),
+       url('../fonts/HeroLight.ttf') format('truetype'),
+       url('../fonts/HeroLight.svg#HeroLight') format('svg');
+}
+
+
+:root {
+  --transparent: transparent;
+  
+  /* COLOR */
+  --primary-neutral-100: #000000;
+  --primary-neutral-90: #404040;
+  --primary-neutral-80: #616161;
+  --primary-neutral-70: #757575;
+  --primary-neutral-60: #9E9E9E;
+  --primary-neutral-50: #C2C2C2;
+  --primary-neutral-30: #EDEDED;
+  --primary-neutral-20: #F5F5F5;
+  --primary-neutral-10: #FFFFFF;
+
+  --accent-110-surface: #FEFCF7;
+  --accent-1-base: #B3A369;
+  --accent-2-base: #DA231C;
+  --accent-250: #E04842;
+  --accent-180-pressed: #595134;
+
+  /* FONT */
+  --main-font: 'Figtree', sans-serif;
+  --title-font: 'Hanken Grotesk', sans-serif;
+  --hero-font: 'Hero', sans-serif;
+  --hero-light-font: 'HeroLight', sans-serif;
+
+  --size-14: 14px;
+  --size-16: 16px;
+  --size-20: 20px;
+  --size-24: 24px;
+  --size-32: 32px;
+  --size-40: 40px;
+  --size-48: 48px;
+  --size-52: 52px;
+  --size-100: 100px;
+
+  --weight-400: 400;
+  --weight-700: 700;
+}
+
+
+body {
+  font-family: var(--main-font);
+  color: var(--primary-neutral-100, #000000);
+}
+.container {
+  max-width: 1152px;
+}
+.line-height-normal {
+  line-height: normal !important;
+}
+.px-100 {
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+.py-100 {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
+.mt-100 {
+  margin-top: 100px !important
+}
+.mt-90 {
+  margin-top: 90px !important
+}
+.pt-100 {
+  padding-top: 100px !important
+}
+.my-100 {
+  margin-top: 100px !important;
+  margin-bottom: 100px !important
+}
+
+/* BUTTON */
+.btn-lg {
+  height: var(--size-52);
+  font-size: var(--size-16);
+}
+.btn-md {
+  height: var(--size-32);
+  font-size: var(--size-16);
+}
+.btn-black {
+  text-decoration: none;
+  font-weight: var(--weight-700);
+  color: var(--primary-neutral-10);
+  background: var(--primary-neutral-100);
+}
+.btn-white-outline {
+  background: transparent;
+  font-weight: var(--weight-700);
+  color: var(--primary-neutral-10);
+  border: 1px solid var(--primary-neutral-10);
+}
+.btn-black-outline {
+  background: transparent;
+  font-weight: var(--weight-700);
+  color: var(--primary-neutral-100);
+  border: 1px solid var(--primary-neutral-100);
+}
+
+/* COLOR */
+.bg-primary-neutral-10 {
+  background: var(--primary-neutral-10, #FFFFFF) !important;
+}
+.color-primary-neutral-10 {
+  color: var(--primary-neutral-10, #FFFFFF) !important;
+}
+.bg-primary-neutral-20 {
+  background: var(--primary-neutral-20, #F5F5F5);
+}
+.color-primary-neutral-20 {
+  color: var(--primary-neutral-20, #F5F5F5);
+}
+.bg-primary-neutral-50 {
+  background: var(--primary-neutral-50, #C2C2C2);
+}
+.color-primary-neutral-50 {
+  color: var(--primary-neutral-50, #C2C2C2);
+}
+.bg-primary-neutral-60 {
+  background: var(--primary-neutral-60, #9E9E9E);
+}
+.color-primary-neutral-60 {
+  color: var(--primary-neutral-60, #9E9E9E);
+}
+.bg-primary-neutral-70 { 
+  background: var(--primary-neutral-70, #757575)
+}
+.color-primary-neutral-70 { 
+  color: var(--primary-neutral-70, #757575)
+}
+.bg-primary-neutral-80 {
+  background: var(--primary-neutral-80, #616161);
+}
+.color-primary-neutral-80 {
+  color: var(--primary-neutral-80, #616161);
+}
+.bg-primary-neutral-90 {
+  background: var(--primary-neutral-90, #404040);
+}
+.color-primary-neutral-90 {
+  color: var(--primary-neutral-90, #404040);
+}
+.bg-primary-neutral-100 {
+  background: var(--primary-neutral-100, #000000) !important;
+}
+.color-primary-neutral-100 {
+  color: var(--primary-neutral-100, #000000) !important;
+}
+.bg-accent-110-surface {
+  background: var(--accent-110-surface, #FEFCF7);
+}
+.color-accent-110-surface {
+  color: var(--accent-110-surface, #FEFCF7);
+}
+.bg-accent-1-base {
+  background: var(--accent-1-base, #B3A369);
+}
+.color-accent-1-base {
+  color: var(--accent-1-base, #B3A369);
+}
+.bg-accent-2-base {
+  background: var(--accent-2-base, #DA231C);
+}
+.color-accent-2-base {
+  color: var(--accent-2-base, #DA231C);
+}
+.bg-accent-250 {
+  background: var(--accent-250, #E04842);
+}
+.color-accent-250 {
+  color: var(--accent-250, #E04842);
+}
+.bg-accent-180-pressed {
+  background: var(--accent-180-pressed, #595134) !important;
+}
+.color-accent-180-pressed {
+  color: var(--accent-180-pressed, #595134) !important;
+}
+
+/* FONT */
+.title {
+  font-family: var(--title-font);
+}
+.title-3xl {
+  font-size: var(--size-100);
+}
+.title-2xl {
+  font-size: var(--size-48);
+}
+.title-xl {
+  font-size: var(--size-40);
+}
+.title-lg {
+  font-size: var(--size-32);
+}
+.title-md {
+  font-size: var(--size-24) !important;
+}
+.title-sm {
+  font-size: var(--size-16);
+}
+
+.font-md {
+  font-size: var(--size-20);
+}
+.font-sm {
+  font-size: var(--size-14);
+}
+
+.weight-400 {
+  font-weight: var(--weight-400) !important;
+}
+.weight-700 {
+  font-weight: var(--weight-700) !important;
+}
+.font-hero {
+  font-family: var(--hero-font);
+}
+.font-hero-light {
+  font-family: var(--hero-light-font);
+}
+
+/* Border */
+.b-bottom-accent-1-base {
+  border-bottom: 1px solid var(--accent-1-base);
+}
+.b-bottom-primary-80 {
+  border-bottom: 1px solid var(--primary-neutral-80);
+}
+.b-bottom-primary-100 {
+  border-bottom: 1px solid var(--primary-neutral-100);
+}
+.b-top-primary-100 {
+  border-top: 1px solid var(--primary-neutral-100);
+}
+.b-primary-20 {
+  border: 1px solid var(--primary-neutral-20);
+}
+
+/* Display */
+.d-list-item {
+  display: list-item !important;
+}
