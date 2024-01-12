@@ -53,7 +53,7 @@
                     <li><input type="checkbox" id="tags-02" /><label for="tags-02">Industry 4.0</label></li>
                     <li><input type="checkbox" id="tags-03" /><label for="tags-03">Big Data</label></li>
                     <li><input type="checkbox" id="tags-04" /><label for="tags-04">Automation</label></li>
-                    <li><input type="checkbox" id="tags-05" /><label for="tags-05">Internet Of Thing’s</label></li>
+                    <li><input type="checkbox" id="tags-05" /><label for="tags-05">Internet Of Things</label></li>
                     <li><input type="checkbox" id="tags-06" /><label for="tags-06">RFID</label></li>
                     <li><input type="checkbox" id="tags-07" /><label for="tags-07">Total Productive Maintenance</label></li>
                   </ul>

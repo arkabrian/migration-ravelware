@@ -16,6 +16,365 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->create();
 
         Resources::insert([
+          [
+            'identifier' => 'penting-manufaktur-perlu-terapkan-artificial-intelligence-2',
+            'type' => 'article',
+            'title' => 'Penting! Manufaktur Perlu Terapkan Artificial Intelligence',
+            'img-path' => 'https://ravelware.files.wordpress.com/2024/01/image-9.png',
+            'tags' => 'Artificial Intelligence, industri 4.0, Internet of Things',
+            'date' => 'January 12, 2024',
+            'content' => "
+          
+          <p>Artificial Intelligence (AI) atau kecerdasan buatan adalah bidang ilmu komputer yang bertujuan untuk menciptakan komputer atau sistem komputasi yang mampu meniru perilaku manusia atau memiliki kemampuan yang mirip dengan pikiran manusia.</p>
+          <p>Pengembangan AI telah menyentuh berbagai bidang, termasuk transportasi otomatis, sistem rekomendasi, pelayanan kesehatan, keamanan siber, dan banyak lagi.</p>
+          <p>Dalam manufaktur penggunaan AI dalam manufaktur bertujuan untuk meningkatkan efisiensi produksi, mengoptimalkan proses, mengurangi biaya, dan meningkatkan kualitas produk. Berikut 3 alasan penting penggunaan AI dalam manufaktur yang perlu diperhatikan :</p>
+          <ul>
+          <li>Prediksi Permintaan (Demand Forecasting) : AI menggunakan data historis dan faktor-faktor eksternal seperti cuaca, tren pasar, atau peristiwa khusus untuk memprediksi permintaan produk di masa mendatang, membantu perusahaan manufaktur dalam merencanakan produksi dan persediaan dengan lebih efektif.</li>
+          </ul>
+          <ul>
+          <li>Kualitas dan Inspeksi : AI dapat digunakan untuk memeriksa dan mengidentifikasi cacat atau ketidaksesuaian pada produk secara otomatis melalui analisis gambar dan teknologi penglihatan komputer. Dengan demikian, meningkatkan tingkat keakuratan dan konsistensi inspeksi.</li>
+          </ul>
+          <ul>
+          <li>Prediksi Perawatan (Predictive Maintenance) : AI dapat digunakan untuk memprediksi kegagalan peralatan atau mesin di pabrik sebelum terjadi kerusakan yang serius. Dengan menganalisis data sensor dan performa mesin secara real-time, AI dapat memberikan peringatan dini, memungkinkan perawatan preventif, dan menghindari kerugian akibat downtime produksi yang tidak terduga.</li>
+          </ul>
+          <p>Dengan penggunaan AI dalam manufaktur, perusahaan dapat meningkatkan efisiensi produksi, mengurangi biaya operasional, meningkatkan kualitas produk, dan merespons perubahan pasar dengan lebih cepat dan tepat. Namun, penerapan AI dalam manufaktur juga memerlukan integrasi teknologi yang cermat, pelatihan karyawan, dan kebijakan keamanan yang tepat agar dapat berjalan dengan sukses.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => 'potensi-aplikasi-graphene-dalam-intelligent-manufacture-system',
+            'type' => 'article',
+            'title' => 'Potensi Aplikasi Graphene dalam Intelligent Manufacture System',
+            'img-path' => 'https://ravelware.files.wordpress.com/2024/01/image-8.png',
+            'tags' => 'Graphene, industri 4.0',
+            'date' => 'January 11, 2024',
+            'content' => "
+          
+          <p>Graphene, sebagai material dengan sifat-sifat unik seperti konduktivitas termal dan listrik yang tinggi, kekuatan yang luar biasa, dan fleksibilitas, dapat memiliki beberapa aplikasi dalam sistem manufaktur cerdas atau Intelligent Manufacturing System (IMS).</p>
+          <p>Penggunaan graphene dalam IMS bergantung pada kebutuhan spesifik dan aplikasi tertentu dalam industri manufaktur cerdas. Karena sifat uniknya, graphene memiliki potensi untuk mengoptimalkan proses dan meningkatkan kinerja dalam berbagai aplikasi dalam konteks IMS.</p>
+          <p>Berikut adalah beberapa potensi aplikasi graphene dalam IMS:</p>
+          <ul>
+          <li>Sensor dan Material Kuat</li>
+          </ul>
+          <p>Graphene dapat digunakan sebagai bahan sensor karena sensitivitasnya terhadap perubahan lingkungan. Dalam IMS, sensor berbasis graphene dapat digunakan untuk memonitor parameter-proses kritis seperti suhu, tekanan, dan kelembaban. Serta penambahan material komposit, graphene dapat meningkatkan kekuatan dan sifat mekaniknya. Ini dapat diterapkan dalam pembuatan komponen-komponen mesin atau struktur dalam IMS untuk meningkatkan kinerja dan daya tahan</p>
+          <ul>
+          <li>Penghantar dan Penyimpan Energi</li>
+          </ul>
+          <p>Sifat konduktif graphene dapat diterapkan dalam manufaktur perangkat elektronik yang canggih dan sistem terkait. Ini dapat membantu dalam pembuatan perangkat elektronik yang lebih efisien dari segi energi dan performa. Graphene dapat diterapkan dalam pengembangan baterai dan superkapasitor berkinerja tinggi. Dalam konteks IMS, ini dapat meningkatkan efisiensi energi dan mendukung solusi penyimpanan energi yang andal.</p>
+          <ul>
+          <li>Pengembangan Komponen Elektronik</li>
+          </ul>
+          <p>Dalam upaya untuk mengintegrasikan IoT (Internet of Things) dan sensor cerdas dalam IMS, graphene dapat digunakan untuk mengembangkan komponen elektronik cerdas yang lebih ringkas dan efisien. Graphene dapat digunakan sebagai lapisan pelindung untuk melindungi komponen kritis dari aus atau korosi. Ini dapat meningkatkan umur dan keandalan peralatan dalam sistem manufaktur.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => 'ravelware-smart-logistic-terkini-untuk-efisiensi-dan-kinerja-optimal',
+            'type' => 'article',
+            'title' => 'Ravelware : Smart Logistic Terkini untuk Efisiensi dan Kinerja Optimal',
+            'img-path' => 'https://ravelware.files.wordpress.com/2024/01/image-7.png',
+            'tags' => 'big data, industri 4.0, Internet of Things, Radio Frequency Identification',
+            'date' => 'January 10, 2024',
+            'content' => "
+          
+          <p>Dalam era yang terus berkembang dan berubah dengan cepat, industri logistik terus mencari solusi inovatif untuk meningkatkan efisiensi dan kinerja operasional mereka. Sistem Smart Logistic by Ravelware dapat mencakup berbagai teknologi canggih seperti penggunaan kecerdasan buatan (AI) untuk meramalkan permintaan, mengoptimalkan rute pengiriman, atau mengelola inventaris secara lebih efisien.</p>
+          <p>Berikut 3 keunggulan Smart logistic untuk meningkatkan efisiensi dan kinerja yang lebih optimal :</p>
+          <ul>
+          <li>Rantai Pasok Berbasis AI</li>
+          </ul>
+          <p>Salah satu solusi terkini yang mengemuka adalah pemanfaatan kecerdasan buatan (AI) dalam sistem manajemen rantai pasok. Teknologi ini memungkinkan perusahaan untuk menganalisis data secara mendalam dari berbagai sumber, termasuk prediksi permintaan, pengelolaan persediaan, dan optimisasi rute pengiriman.</p>
+          <ul>
+          <li>IoT Pelacakan dan Monitoring</li>
+          </ul>
+          <p>Penerapan Internet of Things (IoT) telah membuka peluang baru dalam pemantauan dan pelacakan barang selama proses logistik. Sensor-sensor yang terhubung dapat memberikan visibilitas yang lebih baik terhadap perjalanan barang, mulai dari gudang hingga titik tujuan akhir.</p>
+          <ul>
+          <li>Manajemen Logistik</li>
+          </ul>
+          <p>Dalam rantai pasok, teknologi ini memungkinkan pencatatan transaksi yang tidak dapat diubah dan terdistribusi secara terbuka, sehingga mengurangi risiko kecurangan, meningkatkan akurasi inventaris, serta mempercepat proses verifikasi dokumen.</p>
+          <p>Penerapan ketiga solusi ini telah membuktikan dampaknya dalam meningkatkan efisiensi dan kinerja operasional dalam industri logistik. Namun demikian, untuk mengadopsi teknologi ini dengan sukses, perusahaan perlu mempertimbangkan tantangan implementasi serta investasi yang diperlukan. </p>
+          <p>Dengan terus mengembangkan sistem logistik berbasis teknologi terkini, perusahaan dapat tetap relevan dan bersaing dalam pasar yang terus berubah dan kompetitif.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => 'rfid-untuk-melindungi-privasi-dan-integritas-informasi',
+            'type' => 'article',
+            'title' => 'RFID Untuk Melindungi Privasi dan Integritas Informasi',
+            'img-path' => 'https://ravelware.files.wordpress.com/2024/01/image-6.png',
+            'tags' => 'industri 4.0, Radio Frequency Identification',
+            'date' => 'January 9, 2024',
+            'content' => "
+          
+          <p>RFID adalah singkatan dari “Radio Frequency Identification” (Identifikasi Frekuensi Radio). Ini adalah teknologi yang memungkinkan pengiriman data melalui gelombang radio untuk mengidentifikasi dan melacak objek tertentu yang dilengkapi dengan tag atau label RFID. </p>
+          <p>Dalam konteks keamanan sering digunakan sebagai bagian dari sistem identifikasi, pengawasan akses, dan manajemen keamanan di berbagai lingkungan. Berikut 3 kegunaan RFID guna melindungi privasi dan integritas informasi :</p>
+          <ul>
+          <li>Pengamanan Data</li>
+          </ul>
+          <p>RFID dapat digunakan dalam konteks keamanan informasi untuk memfasilitasi akses terhadap data yang sensitif. Dengan menggunakan tag RFID yang terenkripsi dan diotorisasi, sistem keamanan dapat secara otomatis mengontrol akses dan memverifikasi identitas pengguna.</p>
+          <ul>
+          <li>Pengamanan Privasi</li>
+          </ul>
+          <p>Dalam konteks bisnis atau organisasi, RFID dapat digunakan untuk melacak dan mengelola aset dengan tetap menjaga privasi. Penggunaan tag RFID yang terlindungi secara aman memungkinkan untuk memantau pergerakan barang atau aset tanpa harus mengidentifikasi individu yang terlibat dalam proses tersebut.</p>
+          <ul>
+          <li>Sistem Pembayaran</li>
+          </ul>
+          <p>Dalam aplikasi pembayaran elektronik, RFID dapat digunakan untuk memberikan keamanan dan privasi yang lebih baik. Contohnya, RFID pada kartu pembayaran atau dompet elektronik yang terenkripsi dapat memberikan lapisan tambahan perlindungan terhadap pencurian data atau penggunaan tidak sah.</p>
+          <p>Penggunaan teknologi RFID harus dipertimbangkan dengan cermat untuk memastikan bahwa privasi dan integritas informasi tetap terjaga sambil memanfaatkan keuntungan yang ditawarkan oleh teknologi ini.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => 'transformasi-bisnis-melalui-internet-of-things',
+            'type' => 'article',
+            'title' => 'Transformasi Bisnis Melalui Internet of Things',
+            'img-path' => 'https://ravelware.files.wordpress.com/2024/01/image-3.png',
+            'tags' => 'industri 4.0, Internet of Things, IoT',
+            'date' => 'January 8, 2024',
+            'content' => "
+          
+          <p>Transformasi bisnis melalui Internet of Things (IoT) adalah proses di mana perusahaan menggunakan teknologi IoT untuk meningkatkan efisiensi operasional, mengembangkan model bisnis baru, dan meningkatkan pengalaman pelanggan.</p>
+          <p>IoT mengacu pada jaringan perangkat fisik yang terhubung dan saling berkomunikasi melalui internet, memungkinkan pertukaran data dan kontrol otomatis. Transformasi bisnis melalui IoT memerlukan strategi yang baik, investasi yang tepat, dan kemampuan untuk menerapkan teknologi ini secara efektif guna mendapatkan manfaat yang maksimal.</p>
+          <p>Berikut 3 transformasi bisnis melalui internet of things :</p>
+          <ul>
+          <li>Efisiensi Proses Produksi</li>
+          </ul>
+          <p>Perusahaan dapat menggunakan sensor IoT untuk memantau mesin dan proses produksi secara real-time. Hal ini memungkinkan untuk mengidentifikasi potensi kerusakan atau kegagalan mesin sebelum terjadi, sehingga meminimalkan waktu henti produksi.</p>
+          <ul>
+          <li>Pelayanan yang Lebih Personalisasi</li>
+          </ul>
+          <p>Dengan data yang dikumpulkan dari perangkat IoT, perusahaan dapat memahami kebutuhan pelanggan dengan lebih baik. Hal ini memungkinkan penyedia layanan untuk menawarkan solusi yang lebih dipersonalisasi dan sesuai dengan preferensi pelanggan.</p>
+          <ul>
+          <li>Pemantauan Lingkungan dan Keamanan</li>
+          </ul>
+          <p>Sensor IoT memungkinkan pemantauan lingkungan kerja dan keamanan yang lebih baik. Misalnya, sensor kebakaran atau sensor deteksi gas dapat memperingatkan bahaya secara real-time, memungkinkan respon yang cepat untuk mengurangi risiko.</p>
+          <p>Transformasi bisnis melalui IoT memungkinkan perusahaan untuk mengoptimalkan proses, meningkatkan efisiensi, dan memberikan pengalaman yang lebih baik kepada pelanggan. Namun, dengan adanya perubahan ini juga datang tantangan, termasuk keamanan data, privasi, interoperabilitas perangkat, dan investasi yang diperlukan untuk infrastruktur dan pelatihan sumber daya manusia.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => 'graphene-dalam-penelitian-dan-pengembangan-pertanian-presisi',
+            'type' => 'article',
+            'title' => 'Graphene dalam Penelitian dan Pengembangan Pertanian Presisi',
+            'img-path' => 'https://ravelware.files.wordpress.com/2024/01/image-2.png',
+            'tags' => 'Graphene, industri 4.0',
+            'date' => 'January 4, 2024',
+            'content' => "
+          
+          <p>Penggunaan langsung graphene dalam pertanian presisi masih dilakukan pada area penelitian dan pengembangan. Pertanian presisi ialah kegiatan pertanian yang melibatkan penggunaan teknologi untuk mengoptimalkan berbagai aspek pertanian, termasuk manajemen tanaman, pemanfaatan sumber daya, dan pemantauan.</p>
+          <p>Graphene, dengan sifat uniknya seperti konduktivitas tinggi, kekuatan, dan fleksibilitas, memiliki potensi aplikasi dalam pertanian. Beberapa penggunaan potensial graphene dalam pertanian presisi dapat mencakup :</p>
+          <ul>
+          <li>Sensor</li>
+          </ul>
+          <p>Sensor berbasis graphene dapat digunakan untuk mendeteksi berbagai parameter dalam tanah, seperti tingkat kelembaban, kandungan nutrisi, dan pH. Sensor ini dapat menyediakan data real-time kepada petani, memungkinkan mereka membuat keputusan yang lebih informasional tentang irigasi dan pemupukan.</p>
+          <ul>
+          <li>Nanomaterial untuk Perlindungan Tanaman</li>
+          </ul>
+          <p>Bahan nanomaterial berbasis graphene mungkin dapat dieksplorasi untuk pengembangan bahan pintar dengan sifat antimikroba. Bahan ini dapat digunakan untuk perlindungan tanaman, mengurangi kebutuhan akan pestisida tradisional.</p>
+          <ul>
+          <li>Peralatan Smart Farming </li>
+          </ul>
+          <p>Konduktivitas listrik graphene dapat dimanfaatkan dalam pengembangan komponen elektronik yang lebih efisien dan tahan lama untuk peralatan pertanian pintar. Ini dapat mencakup sensor pada mesin pertanian atau drone yang dilengkapi dengan teknologi berbasis graphene untuk pengumpulan dan analisis data.</p>
+          <p>PT. Ravelware Technology  merupakan penyedia dan pengembang utama graphene yang berdedikasi untuk memajukan inovasi dalam industri. Sebagai perusahaan yang fokus pada pengembangan graphene, Ravelware berkomitmen untuk menyediakan produk berkualitas tinggi yang dapat meningkatkan berbagai sektor, termasuk pertanian presisi, dan berbagai bidang lainnya. </p>
+          <p>Ravelware terus berinovasi untuk memperluas penggunaan graphene, mendorong kemajuan teknologi, dan memberikan kontribusi positif terhadap perkembangan industri global.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => 'ravelware-smart-lighting-sistem-pintar-ravelware-untuk-efisiensi',
+            'type' => 'article',
+            'title' => 'Ravelware : Smart Lighting, Sistem Pintar Ravelware untuk Efisiensi',
+            'img-path' => 'https://ravelware.files.wordpress.com/2024/01/image-1.png',
+            'tags' => 'big data, industri 4.0, Internet of Things, Radio Frequency Identification',
+            'date' => 'January 3, 2024',
+            'content' => "
+          
+          <p>Sistem pintar pencahayaan atau smart lighting adalah teknologi yang memanfaatkan perangkat pintar untuk mengontrol pencahayaan di dalam rumah atau bangunan secara otomatis atau melalui perintah pengguna. Ravelware adalah perusahaan yang mungkin menawarkan solusi pintar untuk efisiensi energi, termasuk dalam hal sistem pencahayaan.</p>
+          <p>Ravelware menawarkan berbagai solusi dalam sistem pintar pencahayaan, seperti sensor gerak, lampu yang dapat dikendalikan secara nirkabel, atau sistem manajemen energi pintar yang terhubung dengan aplikasi pintar untuk mengatur pencahayaan sesuai kebutuhan.</p>
+          <p>Berikut 3 keunggulan penggunaan smart lighting system by Ravelware : </p>
+          <ul>
+          <li>Jadwal Otomatis</li>
+          </ul>
+          <p>Sistem pintar pencahayaan memungkinkan pengguna untuk membuat jadwal otomatis untuk menyalakan atau mematikan lampu pada waktu tertentu. Ini membantu dalam mengurangi penggunaan energi yang tidak perlu saat tidak ada orang di rumah atau saat ruangan tidak digunakan.</p>
+          <ul>
+          <li>Kontrol Pintar</li>
+          </ul>
+          <p>Melalui aplikasi smartphone atau perangkat lainnya, pengguna dapat mengontrol pencahayaan dari jarak jauh. Ini memungkinkan pengguna untuk mematikan lampu yang terlupakan atau mengatur intensitas cahaya tanpa harus berada di tempat.</p>
+          <ul>
+          <li>Integrasi Pintar</li>
+          </ul>
+          <p>Sistem pencahayaan pintar dapat diintegrasikan dengan sistem pintar lainnya di rumah, seperti sistem pintar untuk pengaturan suhu (thermostat) atau perangkat pintar lainnya. Ini memungkinkan sinergi antara perangkat dan mengoptimalkan penggunaan energi secara keseluruhan.</p>
+          <p>Penggunaan sistem pintar pencahayaan dapat membantu meningkatkan efisiensi energi, kenyamanan, dan manajemen rumah atau bangunan. Namun, penting untuk melakukan riset yang teliti sebelum mengadopsi sistem tertentu dan memastikan bahwa hal tersebut sesuai dengan kebutuhan dan situasi.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => 'peran-iot-dalam-transportasi-cerdas',
+            'type' => 'article',
+            'title' => 'Peran IoT dalam Transportasi Cerdas',
+            'img-path' => 'https://ravelware.files.wordpress.com/2024/01/image.png',
+            'tags' => 'industri 4.0, Internet of Things',
+            'date' => 'January 2, 2024',
+            'content' => "
+          
+          <p>Dalam lingkup IoT, berbagai perangkat seperti sensor, kamera, kendaraan, peralatan rumah tangga pintar, atau bahkan perangkat medis dilengkapi dengan teknologi yang memungkinkan mereka untuk terhubung ke internet, mengumpulkan data, berbagi informasi, dan melakukan tindakan yang sesuai berdasarkan data yang terkumpul.</p>
+          <p>Tujuan utama dari IoT adalah untuk menciptakan keterhubungan yang lebih baik antara perangkat, memungkinkan pengumpulan data yang lebih luas dan kemampuan analisis yang lebih baik untuk menghasilkan informasi yang berguna.</p>
+          <p>Berikut adalah tiga peran utama IoT dalam transportasi cerdas:</p>
+          <ul>
+          <li>Monitoring</li>
+          </ul>
+          <p>IoT memungkinkan penggunaan sensor yang terhubung untuk memantau kondisi lalu lintas secara real-time. Sensor-sensor ini dapat dipasang pada jalan, kendaraan, atau infrastruktur transportasi lainnya untuk mengumpulkan data tentang lalu lintas, kepadatan, kecepatan kendaraan, serta kondisi jalan.</p>
+          <ul>
+          <li>Kendaraan Terhubung</li>
+          </ul>
+          <p>IoT memungkinkan mobil dan kendaraan lainnya untuk terhubung satu sama lain serta dengan infrastruktur jalan. Melalui teknologi ini, kendaraan dapat saling berkomunikasi dan bertukar informasi, seperti informasi lalu lintas, kecelakaan, cuaca, dan lainnya.</p>
+          <ul>
+          <li>Pemantauan dan Perawatan</li>
+          </ul>
+          <p>IoT juga memainkan peran penting dalam pemeliharaan kendaraan. Sensor-sensor yang terpasang pada kendaraan dapat memantau kondisi mesin, performa, dan suku cadang yang memungkinkan untuk perawatan yang lebih tepat waktu dan efisien.</p>
+          <p>Secara keseluruhan, IoT menggambarkan konsep di mana perangkat-perangkat yang berbeda dapat terhubung dan berkomunikasi melalui internet, membentuk jaringan yang cerdas dan mendukung berbagai aplikasi untuk memperbaiki proses, meningkatkan efisiensi, dan meningkatkan kualitas hidup.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => 'tingkat-daya-saing-perusahaan-dengan-m2m-2',
+            'type' => 'article',
+            'title' => 'Tingkat Daya Saing Perusahaan Dengan M2M',
+            'img-path' => 'https://ravelware.files.wordpress.com/2023/12/image-18.png',
+            'tags' => 'big data, industri 4.0, Internet of Things, Radio Frequency Identification',
+            'date' => 'December 29, 2023',
+            'content' => "
+          
+          <p>Maraknya penggunaan teknologi digital seperti kecerdasan buatan, teknologi robotic dan internet of things dapat menjadi kunci sebuah perusahaan untuk meningkatkan daya saing dengan mengadopsi teknologi tersebut.</p>
+          <p>Mengadopsi teknologi yang mendukung perkembangan dan integrasi konektivitas, teknologi, informasi dan komunikasi merupakan kunci bagi bisnis untuk bertransformasi secara digital.</p>
+          <ul>
+          <li>Pengertian M2M</li>
+          </ul>
+          <p>M2M merupakan sebuah metode konektivitas di mana setiap mesin yang terlibat di dalamnya mampu berkomunikasi untuk menyelesaikan suatu tugas tertentu secara otomatis.</p>
+          <p>M2M atau yang biasa dikenal dengan Machine to Machine merupakan sebuah teknologi terbaru yang memanfaatkan teknologi komunikasi nirkabel berbasis cloud. Dengan menghubungkan yang satu ke mesin lainnya secara real time. M2M tersendiri sudah banyak digunakan pada perusahaan [erusahaan yang menginginkan efisiensi dalam controlling.</p>
+          <p>Dalam sistem M2M, perangkat elektronik, seperti sensor, mesin, atau perangkat keras lainnya, dapat saling berkomunikasi dan bertukar informasi secara otomatis melalui jaringan komunikasi, seperti internet atau jaringan seluler.</p>
+          <ul>
+          <li>Penerapan M2M</li>
+          </ul>
+          <p>Informasi yang dikumpulkan oleh perangkat M2M dapat digunakan untuk pemantauan, pengawasan, analisis, pengambilan keputusan otomatis, atau untuk mengoptimalkan operasi yang melibatkan perangkat tersebut.</p>
+          <p>Contoh penggunaan M2M dapat ditemukan dalam berbagai industri, seperti industri otomotif (misalnya, sistem telematika dalam mobil), kesehatan (misalnya, perangkat pemantauan pasien jarak jauh), energi (misalnya, pengukuran pintar dan manajemen jaringan), dan banyak lagi.</p>
+          <ul>
+          <li>M2M Untuk Daya Saing</li>
+          </ul>
+          <p>Dengan menggunakan embedded SIM card yang mentransmisikan data secara nirkabel melalui jaringan seluler yang aman, M2M mampu melacak kendaraan dan aset untuk efisiensi dan keamanan yang lebih baik.</p>
+          <p>Dengan memungkinkan semua kendaraan pengiriman, untuk terhubung secara otomatis ke sistem manajemen pusat perusahaan di mana pun mereka berada, M2M memiliki dampak besar pada rantai pasokan.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => '3-inovasi-sensor-berbasis-graphene',
+            'type' => 'article',
+            'title' => '3 Inovasi Sensor Berbasis Graphene',
+            'img-path' => 'https://ravelware.files.wordpress.com/2023/12/image-17.png',
+            'tags' => 'Graphene, industri 4.0',
+            'date' => 'December 28, 2023',
+            'content' => "
+          
+          <p>Penggunaan graphene dalam pengembangan sensor yang lebih canggih dan berkinerja tinggi untuk berbagai aplikasi, mulai dari industri hingga perawatan kesehatan. </p>
+          <p>Keunggulan seperti kepekaan tinggi, ukuran yang lebih kecil, dan fleksibilitas dalam desain sensor adalah beberapa faktor yang membuat sensor berbasis graphene menjadi fokus pengembangan teknologi sensor masa depan.</p>
+          <p>Terdapat berbagai inovasi menarik dalam pengembangan sensor berbasis graphene yang memanfaatkan sifat unik material ini. Berikut adalah tiga inovasi utama:</p>
+          <ul>
+          <li>Sensor Suhu Ultra-Responsif</li>
+          </ul>
+          <p>Sensor suhu berbasis graphene menawarkan respons yang sangat cepat terhadap perubahan suhu. Karena konduktivitas termal yang luar biasa dari graphene, sensor suhu ini dapat mendeteksi perubahan suhu dengan sangat akurat dan cepat, membuatnya ideal untuk aplikasi di bidang industri, seperti pemantauan suhu dalam sistem elektronik atau pendinginan industri.</p>
+          <ul>
+          <li>Sensor Kelembaban</li>
+          </ul>
+          <p>Sensor kelembaban berbasis graphene mampu mendeteksi kadar kelembaban dalam lingkungan dengan tingkat sensitivitas yang tinggi. Hal ini penting dalam banyak aplikasi, termasuk kontrol iklim dalam bangunan, perawatan tanaman, penyimpanan makanan, dan pengawasan lingkungan yang membutuhkan pemantauan kelembaban yang akurat.</p>
+          <ul>
+          <li>Sensor Tekanan Darah Fleksibel</li>
+          </ul>
+          <p>Sensor tekanan darah yang terbuat dari graphene dapat dirancang secara fleksibel untuk aplikasi medis yang inovatif. Sensor ini dapat ditempatkan pada perangkat wearable atau bahkan di baju untuk memantau tekanan darah secara terus-menerus pada pasien tanpa mengganggu aktivitas sehari-hari. Hal ini dapat mengarah pada pemantauan kesehatan yang lebih baik dan deteksi dini kondisi medis.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => 'iot-efisiensi-produktivitas-dan-keunggulan-bersaing',
+            'type' => 'article',
+            'title' => 'IoT : Efisiensi, Produktivitas, dan Keunggulan Bersaing',
+            'img-path' => 'https://ravelware.files.wordpress.com/2023/12/image-16.png',
+            'tags' => 'Internet of Things, IoT',
+            'date' => 'December 27, 2023',
+            'content' => "
+          
+          <p>Internet of Things (IoT) atau Internet Hal-hal adalah konsep di mana perangkat fisik, objek, atau mesin dapat terhubung ke internet dan saling berkomunikasi, mengumpulkan, dan berbagi data tanpa intervensi manusia. Dalam IoT, perangkat-perangkat ini dilengkapi dengan sensor, perangkat lunak, dan teknologi lainnya yang memungkinkan mereka untuk saling berkomunikasi dan bertindak berdasarkan informasi yang diterima.</p>
+          <p>Penerapan IoT telah memberikan berbagai manfaat yang signifikan bagi berbagai industri, termasuk efisiensi, produktivitas, dan keunggulan bersaing, antara lain :</p>
+          <ul>
+          <li>Monitoring dan Manajemen Energi</li>
+          </ul>
+          <p>IoT memungkinkan pemantauan real-time dan pengendalian otomatis atas berbagai sistem. Contohnya, dalam manufaktur, IoT memungkinkan peralatan untuk dikontrol secara otomatis, mengoptimalkan waktu produksi dan mengurangi limbah. Dalam lingkungan bisnis dan industri, IoT memungkinkan pengelolaan yang lebih efisien terhadap penggunaan energi dengan mengumpulkan data tentang konsumsi energi dan mengidentifikasi area yang memerlukan perbaikan.</p>
+          <ul>
+          <li>Prediksi Perawatan dan Rantai Pasok</li>
+          </ul>
+          <p>IoT memungkinkan pemantauan kondisi peralatan secara real-time. Hal ini memungkinkan perusahaan untuk meramalkan potensi kerusakan atau kegagalan, sehingga perawatan dapat dilakukan sebelum terjadi downtime yang tidak terduga. IoT memungkinkan visibilitas dan pengelolaan yang lebih baik terhadap rantai pasokan, termasuk pelacakan inventaris secara real-time, mempercepat pengiriman, dan mengoptimalkan proses distribusi.</p>
+          <ul>
+          <li>Inovasi Produk dan Layanan</li>
+          </ul>
+          <p>IoT memungkinkan perusahaan untuk mengembangkan produk dan layanan baru yang terhubung dengan teknologi, seperti perangkat pintar yang mengumpulkan data untuk memperbaiki pengalaman pengguna. Dengan mengumpulkan dan menganalisis data dari IoT, perusahaan dapat membuat keputusan yang lebih cerdas dan strategis, membantu mereka mengantisipasi tren pasar dan kebutuhan pelanggan.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
+          [
+            'identifier' => '4-effect-positif-penggunaan-supply-chain-management-2',
+            'type' => 'article',
+            'title' => '4 Effect Positif Penggunaan Supply Chain Management',
+            'img-path' => 'https://ravelware.files.wordpress.com/2023/12/image-15.png',
+            'tags' => 'big data, industri 4.0, Internet of Things, Radio Frequency Identification',
+            'date' => 'December 22, 2023',
+            'content' => "
+          
+          <p>Supply chain ialah pengelolaan aliran barang, informasi serta jasa yang melibatkan koordinasi sdan kerjasama antara berbagai pihak dalam rantai pasokan untuk menghasilkan kualitas yang baik bagi pelanggan. </p>
+          <p>SCM tentu saja melibatkan perencanaan, pengendalian dan pengawasan terhadap semua aktivitas yang terlibat mulai dari proses produksi sampai dengan disribusi.</p>
+          <p>Tujuan utama yang ingin dicapai SCM adalah untuk mengoptimalkan kinerja dan efisiensi rantai pasok secara keseluruhan dengan cara mengintegrasikan aktivitas maupun proses mulai tahap awal hingga tahap akhir.</p>
+          <p>Selain itu, perusahaan juga dapat menghubungkan semua pihak yang terlibat di dalam proses perubahan bahan baku menjadi barang jadi. Karena itulah, proses produksi maupun pendistribusian barang/jasa yang dihasilkan oleh sebuah perusahaan dapat berjalan dengan lebih efektif dan efisien. Berikut 4 effect positif penggunaan supply chain management :</p>
+          <ul>
+          <li>Menurunkan Biaya</li>
+          </ul>
+          <p>Dengan penggunaan SCM perusahaan dapat menekan biaya yang harus mereka keluarkan untuk proses tersebut, hadirnya pengintegrasian aliran produk dari sebuah perusahaan kepada para konsumen dapat mengurangi biaya yang harus dikeluarkan pada jalur produksi dan juga distribusi.</p>
+          <ul>
+          <li>Pemanfaatan Aset</li>
+          </ul>
+          <p>Dalam menerapkan manajemen rantai pasokan, teknologi memiliki peran yang cukup penting. Dengan adanya teknologi yang terdapat pada manajemen rantai pasokan tersebut, perusahaan dituntut untuk meningkatkan kinerja para karyawanya.</p>
+          <p>Karyawan sebagai salah satu aset terbesar dalam perusahaan tentu saja akan berusaha meningkatkan keterampilan dan juga pengetahuannya agar dapat menerapkan manajemen rantai pasokan dengan maksimal.</p>
+          <ul>
+          <li>Kepuasan Pelanggan</li>
+          </ul>
+          <p>Penggunaan supply chain dapat membuat perusahaan dengan mudah memberikan rasa puas terhadap para pelanggannya. Pelanggan meerupakan target utama sebuah perusahaan dalam aktivitas produksi karena mereka ialah pihak yang akan membeli dan menggunakan barang maupun jasa yang dihasilkan perusahaan.</p>
+          <ul>
+          <li>Meningkatkan Pendapatan</li>
+          </ul>
+          <p>Semakin banyak konsumen yang setia untuk menggunakan barang/jasa sebuah perusahaan dalam jangka waktu yang lama, semakin besar pula peluang perusahaan tersebut untuk meningkatkan pendapatannya. Barang-barang yang dihasilkan oleh perusahaan tersebut juga tidak akan terbuang sia-sia setelah di produksi karena barang itu diminati dan juga dipakai oleh para konsumen.</p>
+          ",
+            'views' => 0,
+            'visitors' => 0,
+            'likes' => 0
+          ],
             [
               'identifier' => 'keamanan-lebih-dengan-chipless-rfid',
               'type' => 'article',

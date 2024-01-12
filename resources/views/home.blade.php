@@ -61,6 +61,24 @@
             </div>
           </div>
           <div class="intro-list">
+            <div class="d-flex align-items-center h-100 banner-bottom">
+              <div class="container ps-0">
+                <div class="text">
+                  <h2 class="title title-xl text-uppercase">SAFETY ASSURANCE PRODUCTIVITY UP (SAPU)</h2>
+                  <h2 class="title title-l text-uppercase">12-MONTHS WARRANTY; AT LEAST 10% PRODUCTIVITY UP</h2>
+                  <p class="my-4">Simplest way to secure your company's future and  scale up your business by getting rid the 8-wastes off and entering the Lean Manufacturing era.</p>
+                  <div class="d-flex align-items-center">
+                    <a href="" class="btn-lg btn-black px-4 d-flex align-items-center">Book Consultation & Demo</a>
+                    <a href="" class="ms-4 color-primary-neutral-100 weight-700 text-decoration-none d-flex align-items-center">Explore More <img src="{{asset('img/icon/arrow-right.svg')}}" class="ms-2"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="box-banner">
+                <img src="{{asset('img/banner-06-all.jpg')}}">
+              </div>
+            </div>
+          </div>
+          <div class="intro-list">
             <div class="d-flex align-items-center h-100 banner-right-full flex-column">
               <div class="full-top position-relative w-100 d-flex align-items-center">
                 <div class="container ps-0">
@@ -75,7 +93,7 @@
                   </div>
                 </div>
                 <div class="box-banner">
-                  <img src="{{asset('img/banner-06.jpg')}}">
+                  <img src="{{asset('img/banner-07.jpg')}}">
                 </div>
               </div>
               <div class="full-bottom d-flex align-items-center">
@@ -140,17 +158,23 @@
           <h2 class="title title-xl color-primary-neutral-100 weight-700 d-flex align-items-center mt-4">Product & Solution</h2>
           <div class="row mt-4">
             <div class="col-md-6">
-              <p class="mb-0">Your Comprehensive Automation Solution on an IoT Platform. Harness real-time insights to enhance decision-making, streamline processes, and empower your team. Built on the principles of Overall Equipment Effectiveness (OEE) and Total Productive Maintenance (TPM), we cater to Manufacturing, Warehousing, and Logistics.</p>
+              <p class="mb-0">Your Comprehensive Automation Solution on an IoT Platform. Harness real-time insights to enhance decision-making, streamline processes, and empower your team. Built on the principles of Overall Equipment Effectiveness (OEE), Total Productive Maintenance (TPM), and Toyota Production System (TPS), we cater to Manufacturing, Warehousing, Logistic.</p>
             </div>
             <div class="col-md-6">
               <div class="d-flex justify-content-end sm-justify-content-start sm-mt-3">
-                <a href="" class="d-inline-flex btn-lg align-items-center btn-black-outline px-4 position-relative text-decoration-none">See All our Product & Solution <img src="{{asset('img/icon/arrow-right.svg')}}" class="ms-2"></a>
+                <a href="/products" 
+                  class="d-inline-flex btn-lg align-items-center btn-black-outline px-4 position-relative text-decoration-none" >
+                  <span class="position-relative">
+                      See All our Product & Solution 
+                      <img src="{{asset('img/icon/arrow-right.svg')}}" class="ms-2">
+                  </span>
+                </a>
               </div>
             </div>
           </div>
           <ul class="list-unstyled row product-solution-list mt-5">
             <li class="col-md-4">
-              <a class="box d-flex flex-column text-decoration-none p-5">
+              <a href="/products#ims" class="box d-flex flex-column text-decoration-none p-5">
                 <div>
                   <img src="{{asset('img/product/product-01-initial.png')}}" class="initial img-fluid">
                   <img src="{{asset('img/product/product-01.png')}}" class="hover img-fluid">
@@ -162,7 +186,7 @@
               </a>
             </li>
             <li class="col-md-4">
-              <a class="box d-flex flex-column text-decoration-none p-5">
+              <a href="/products#software" class="box d-flex flex-column text-decoration-none p-5">
                 <div>
                   <img src="{{asset('img/product/product-02-initial.png')}}" class="initial img-fluid">
                   <img src="{{asset('img/product/product-02.png')}}" class="hover img-fluid">
@@ -174,7 +198,7 @@
               </a>
             </li>
             <li class="col-md-4">
-              <a class="box d-flex flex-column text-decoration-none p-5">
+              <a href="/products#hardware" class="box d-flex flex-column text-decoration-none p-5">
                 <div>
                   <img src="{{asset('img/product/product-03-initial.png')}}" class="initial img-fluid">
                   <img src="{{asset('img/product/product-03.png')}}" class="hover img-fluid">
@@ -272,6 +296,7 @@
                       <li class="col-md-4">
                         <div class="slick-client-fade">
                           <div><div class="box-fade"><img src="{{asset('img/client/client-01.svg')}}" alt=""></div></div>
+                          <div><div class="box-fade"><img src="{{asset('img/client/client-bca.png')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-02.svg')}}" alt=""></div></div>
                         </div>
                       </li>
@@ -279,6 +304,7 @@
                         <div class="slick-client-fade">
                           <div><div class="box-fade"><img src="{{asset('img/client/client-03.svg')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-04.svg')}}" alt=""></div></div>
+                          <div><div class="box-fade"><img src="{{asset('img/client/client-agci.svg')}}" alt=""></div></div>
                         </div>
                       </li>
                     </ul>
@@ -289,18 +315,21 @@
                         <div class="slick-client-fade">
                           <div><div class="box-fade"><img src="{{asset('img/client/client-05.svg')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-06.svg')}}" alt=""></div></div>
+                          <div><div class="box-fade"><img src="{{asset('img/client/client-easygo.jpg')}}" alt=""></div></div>
                         </div>
                       </li>
                       <li class="col-md-4">
                         <div class="slick-client-fade">
                           <div><div class="box-fade"><img src="{{asset('img/client/client-07.svg')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-08.svg')}}" alt=""></div></div>
+                          <div><div class="box-fade"><img src="{{asset('img/client/client-eidai.png')}}" alt=""></div></div>
                         </div>
                       </li>
                       <li class="col-md-4">
                         <div class="slick-client-fade">
                           <div><div class="box-fade"><img src="{{asset('img/client/client-09.svg')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-10.svg')}}" alt=""></div></div>
+                          <div><div class="box-fade"><img src="{{asset('img/client/client-musashi.webp')}}" alt=""></div></div>
                         </div>
                       </li>
                     </ul>
@@ -311,18 +340,21 @@
                         <div class="slick-client-fade">
                           <div><div class="box-fade"><img src="{{asset('img/client/client-11.svg')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-12.svg')}}" alt=""></div></div>
+                          <div><div class="box-fade"><img src="{{asset('img/client/client-tridi.webp')}}" alt=""></div></div>
                         </div>
                       </li>
                       <li class="col-md-4">
                         <div class="slick-client-fade">
                           <div><div class="box-fade"><img src="{{asset('img/client/client-13.svg')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-14.svg')}}" alt=""></div></div>
+                          <div><div class="box-fade"><img src="{{asset('img/client/client-adaptive.jpg')}}" alt=""></div></div>
                         </div>
                       </li>
                       <li class="col-md-4">
                         <div class="slick-client-fade">
                           <div><div class="box-fade"><img src="{{asset('img/client/client-15.svg')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-16.svg')}}" alt=""></div></div>
+                          <div><div class="box-fade"><img src="{{asset('img/client/client-ecoxyztem.png')}}" alt=""></div></div>
                         </div>
                       </li>
                     </ul>
@@ -334,14 +366,17 @@
                         <div class="slick-client-fade">
                           <div><div class="box-fade"><img src="{{asset('img/client/client-17.svg')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-18.svg')}}" alt=""></div></div>
+                          <div><div class="box-fade"><img src="{{asset('img/client/client-infiniti.jpg')}}" alt=""></div></div>
                         </div>
                       </li>
                       <li class="col-md-4">
                         <div class="slick-client-fade">
+                          <div><div class="box-fade"><img src="{{asset('img/client/client-telkomsel.webp')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-19.svg')}}" alt=""></div></div>
                           <div><div class="box-fade"><img src="{{asset('img/client/client-20.svg')}}" alt=""></div></div>
                         </div>
                       </li>
+
                     </ul>
                   </div>
                 </div>

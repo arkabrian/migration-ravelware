@@ -50,6 +50,10 @@ Route::get('/admin-post', function () {
     return view('post-article');
 });
 
+Route::get('/products', function () {
+    return view('products');
+});
+
 Route::get('/resources', function () {
     return view('resources', [
         'heading' => 'Latest Articles',
