@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Resources;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Ikluminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Resources>
@@ -14,6 +16,8 @@ class ResourceFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    protected $model = Resources::class;
     public function definition(): array
     {
         return [

@@ -1,6 +1,5 @@
-@props(['tagsCSV'])
 @php
-
+  $tags = explode(',', $resource['tags']);
 @endphp
 
 @extends('layout')
@@ -15,7 +14,7 @@
         <h2 class="title title-lg color-primary-neutral-10 mb-4">{{ $resource['title'] }}</h2>
         <p class="mb-4 text-wrap border-0 color-primary-neutral-10 mb-4">Posted on <span class="color-accent-1-base ms-2">{{ $resource['date'] }}</span></p>
         <ul class="list-unstyled d-flex align-items-center mb-5 w-100 justify-content-center tags-white">
-          @foreach($resource['tags'] as $tag)
+          @foreach($tags as $tag)
           <li><input type="checkbox" id="" readonly><label for="">{{$tag}}</label></li>
           @endforeach
         </ul>

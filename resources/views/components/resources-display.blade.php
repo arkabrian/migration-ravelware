@@ -1,3 +1,7 @@
+@php
+  $tags = explode(',', $resource['tags']);
+@endphp
+
 <li>
   <div class="general-card">
     <a href="resources/{{ $resource['id']}}" class="card border-0 text-decoration-none">
@@ -6,7 +10,7 @@
         <div class="tags d-flex align-items-center mb-4">
           <h5 class="mb-0 weight-700">Tags :</h5>
           <ul class="list-unstyled d-flex align-items-center mb-0">
-            @foreach($resource['tags'] as $tag)
+            @foreach($tags as $tag)
             <li><input type="checkbox" id="tags-02" checked readonly /><label for="tags-02">{{ $tag }}</label></li>
             @endforeach
           </ul>

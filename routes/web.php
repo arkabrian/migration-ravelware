@@ -42,6 +42,14 @@ Route::get('/consult-date', function () {
     return view('consult-date');
 });
 
+Route::get('/admin-log-in', function () {
+    return view('log-in');
+});
+
+Route::get('/admin-post', function () {
+    return view('post-article');
+});
+
 Route::get('/resources', function () {
     return view('resources', [
         'heading' => 'Latest Articles',
@@ -49,8 +57,8 @@ Route::get('/resources', function () {
     ]);
 });
 
-Route::get('/resources/{id}', function($id) {
+Route::get('/resources/{identifier}', function($identifier) {
     return view('resource', [
-        'resource' => Resources::find($id)
+        'resource' => Resources::find($identifier)
     ]);
 });

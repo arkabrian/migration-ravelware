@@ -137,5 +137,24 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    let page = 1; // Track the current page
+    const perPage = 5; // Number of articles to load per page
+  
+    $(window).scroll(function() {
+      if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+        $.ajax({
+          url: '/load-more-articles?page=' + page,
+          method: 'GET',
+          dataType: 'html',
+          success: function(data) {
+            $('#articleContainer').append(data);
+            page++; // Increment the page count for the next load
+          }
+        });
+      }
+    });
+  </script>
+  
 
 @endsection
