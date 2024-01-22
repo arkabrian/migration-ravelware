@@ -367,6 +367,23 @@
             <a class="nav-link {{ $activeMenu === 'resources' ? 'active' : '' }}" href="/resources"><span class="position-relative">Resources</span></a>
           </li>
         </ul>
+        @auth
+        <ul class="flex space-x-6 mr-6 text-lg">          
+          <li>
+            <span class="font-bold uppercase">
+              Welcome {{auth()->user()->name}}
+            </span>
+          </li>
+          <li>
+            <form class="inline" method="POST" action="/admin-logout">
+              @csrf
+              <button type="submit">
+                <i class="fa-solid fa-door-closed"></i> Logout
+              </button>
+            </form>
+          </li>
+        </ul>
+        @endauth
         <a href="/contact" class="btn-lg btn-black px-4 d-flex align-items-center position-relative">Let's Talk</a>
       </div>
     </div>

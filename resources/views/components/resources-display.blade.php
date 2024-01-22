@@ -4,7 +4,7 @@
 
 <li>
   <div class="general-card">
-    <a href="resources/{{ $resource['id']}}" class="card border-0 text-decoration-none">
+    <a href="/resources/{{ $resource['id']}}" class="card border-0 text-decoration-none">
       <img src="{{ $resource['img-path'] }}" class="card-img-top card-img-blog" alt="...">
       <div class="card-body pt-5 px-0">
         <div class="tags d-flex align-items-center mb-4">

@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->id();
-            $table->string('identifier');
+            $table->string('identifier')->default(null);
             $table->string('type');
             $table->string('title');
             $table->string('img-path');
             $table->string('tags');
             $table->string('date');
             $table->longText('content');
-            $table->integer('views');
-            $table->integer('visitors');
-            $table->integer('likes');
+            $table->integer('views')->default(0);
+            $table->integer('visitors')->default(0);
+            $table->integer('likes')->default(0);
         });
     }
 

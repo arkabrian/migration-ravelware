@@ -64,9 +64,9 @@
             <div class="d-flex align-items-center h-100 banner-bottom">
               <div class="container ps-0">
                 <div class="text">
-                  <h2 class="title title-xl text-uppercase">SAFETY ASSURANCE PRODUCTIVITY UP (SAPU)</h2>
+                  <h2 class="title title-xl text-uppercase">PRODUCTIVITY ASSURANCE <br>BY OPTIMIZATION & STANDARDIZATION (PA'BOS)</h2>
                   <h2 class="title title-l text-uppercase">12-MONTHS WARRANTY; AT LEAST 10% PRODUCTIVITY UP</h2>
-                  <p class="my-4">Simplest way to secure your company's future and  scale up your business by getting rid the 8-wastes off and entering the Lean Manufacturing era.</p>
+                  <p class="my-4">Simplest way in less than IDR 5 Mio per month to start securing your company's future and scale up your business by getting rid the 8-wastes off and entering the Lean Manufacturing era.</p>
                   <div class="d-flex align-items-center">
                     <a href="" class="btn-lg btn-black px-4 d-flex align-items-center">Book Consultation & Demo</a>
                     <a href="" class="ms-4 color-primary-neutral-100 weight-700 text-decoration-none d-flex align-items-center">Explore More <img src="{{asset('img/icon/arrow-right.svg')}}" class="ms-2"></a>
@@ -173,7 +173,7 @@
             </div>
           </div>
           <ul class="list-unstyled row product-solution-list mt-5">
-            <li class="col-md-4">
+            <li class="col-md-3">
               <a href="/products#ims" class="box d-flex flex-column text-decoration-none p-5">
                 <div>
                   <img src="{{asset('img/product/product-01-initial.png')}}" class="initial img-fluid">
@@ -185,7 +185,20 @@
                 </h2>
               </a>
             </li>
-            <li class="col-md-4">
+            <li class="col-md-3">
+              <a href="/products#pabos" class="box d-flex flex-column text-decoration-none p-5">
+                <div>
+                  <img src="{{asset('img/product/product-04-initial.png')}}" class="initial img-fluid">
+                  <img src="{{asset('img/product/product-04.png')}}" class="hover img-fluid">
+                </div>
+                <h2 class="mb-0 mt-auto align-items-end justify-content-between">
+                  <span class="title weight-700 title-lg">Pa'Bos -</span><br>
+                  <span class="title weight-700 title-md">Productivity Warranty</span>
+                  <img src="{{asset('img/icon/arrow-right-block.svg')}}">
+                </h2>
+              </a>
+            </li>
+            <li class="col-md-3">
               <a href="/products#software" class="box d-flex flex-column text-decoration-none p-5">
                 <div>
                   <img src="{{asset('img/product/product-02-initial.png')}}" class="initial img-fluid">
@@ -193,11 +206,11 @@
                 </div>
                 <h2 class="mb-0 mt-auto d-flex align-items-end justify-content-between">
                   <span class="title weight-700 title-lg">Software Capability</span>
-                  <img src="{{asset('img/icon/arrow-right-block.svg')}}">
+                  <img class='mr-2' src="{{asset('img/icon/arrow-right-block.svg')}}">
                 </h2>
               </a>
             </li>
-            <li class="col-md-4">
+            <li class="col-md-3">
               <a href="/products#hardware" class="box d-flex flex-column text-decoration-none p-5">
                 <div>
                   <img src="{{asset('img/product/product-03-initial.png')}}" class="initial img-fluid">
@@ -260,11 +273,11 @@
         <div class="container">
           <div class="row" id="counter">
             <div class="col-md-3 text-center">
-              <h2 class="title title-3xl color-primary-neutral-10 line-height-normal weight-700"><span>7</span>+</h2>
+              <h2 class="title title-3xl color-primary-neutral-10 line-height-normal weight-700"><span>8</span>+</h2>
               <p class="mb-0 title color-primary-neutral-10 title-lg weight-700">Operated Years</p>
             </div>
             <div class="col-md-3 text-center">
-              <h2 class="title title-3xl color-primary-neutral-10 line-height-normal weight-700"><span>18</span>+</h2>
+              <h2 class="title title-3xl color-primary-neutral-10 line-height-normal weight-700"><span>21</span>+</h2>
               <p class="mb-0 title color-primary-neutral-10 title-lg weight-700">Our Teams</p>
             </div>
             <div class="col-md-3 text-center">
@@ -632,56 +645,57 @@
         </div>
       </div>
 
-      <!-- Testimony -->
+      <!-- Achievements -->
       <div class="bg-primary-neutral-10 pt-5 testimony">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-12">
-              <div class="d-flex mb-3 justify-content-center"><span class="btn-md btn-black px-3 d-flex align-items-center justify-content-center weight-400">Testimony</span></div>
-              <h2 class="mb-0 title title-2xl color-primary-neutral-100 weight-700 d-flex align-items-center justify-content-center">“ Let’s Hear What they say ”</h2>
+              <div class="d-flex mb-3 justify-content-center"><span class="btn-md btn-black px-3 d-flex align-items-center justify-content-center weight-400">Achievements</span></div>              <h2 class="mb-0 title title-2xl color-primary-neutral-100 weight-700 d-flex align-items-center justify-content-center">“ Let's See What We've Achieved ”</h2>
             </div>
           </div>
           <div class="slick-testimony mt-5">
             <div class="p-5 testimony-list">
-              <p class="font-md">
-                <span>“</span>
-                Good job! Ravelware can complete work and provide response and feedback quickly. Their team members always provide suggestion for us, so our factory can run more efficient.
-                <span>“</span>
+              <span>2022</span>
+              <p class="font-sm">
+                Became the premier Indonesian company amongst 17 startups in the esteemed Global Incubator Network by the Austrian Government. This acknowledgment not only facilitated the establishment of Ravelware’s R&D Centre in Austria but also spearheaded our international business expansion into the Austrian and broader European market, pushing the boundaries of Industry 4.0 solutions.
               </p>
               <div class="d-flex align-items-center">
-                <img class="img-user" src="{{asset('img/user-01.jpg')}}">
                 <h4 class="font-md weight-700 ps-3 mb-0">
-                  John Doe, Improvement Leader<br>
-                  PT. Lorem Ipsum Manufacturing
                 </h4>
+                <img src="{{asset('img/achivements-03.jpg')}}">
               </div>
             </div>
             <div class="p-5 testimony-list">
-              <p class="font-md">
-                <span>“</span>
-                Good job! Ravelware can complete work and provide response and feedback quickly. Their team members always provide suggestion for us, so our factory can run more efficient.
-                <span>“</span>
+              <span>2023</span>
+              <p class="font-sm">
+                Handpicked for a special visit to JETRO Japan, marking our integration into the Japanese industry ecosystem in Indonesia.
               </p>
               <div class="d-flex align-items-center">
-                <img class="img-user" src="{{asset('img/user-01.jpg')}}">
                 <h4 class="font-md weight-700 ps-3 mb-0">
-                  John Doe, Improvement Leader<br>
-                  PT. Lorem Ipsum Manufacturing
                 </h4>
+                <img src="{{asset('img/achivements-04.jpg')}}">
               </div>
             </div>
             <div class="p-5 testimony-list">
-              <p class="font-md">
-                <span>“</span>
-                Good job! Ravelware can complete work and provide response and feedback quickly. Their team members always provide suggestion for us, so our factory can run more efficient.
-                <span>“</span>
+              <p class="font-sm">
+                <span>2023</span>
+                Carved a niche as an exclusive local-tech partner in the collaboration between the Minister of Economic, Trade, Industry (METI) Japan and the Ministry of Industry of the Republic of Indonesia (Kemenperin RI) for the Lean Monozukuri program. This aligns with the PIDI 4.0 roadmap propelling the Indonesia 4.0 initiative, reaffirming our commitment to smart logistic solutions and intelligent manufacture systems (IMS).
               </p>
               <div class="d-flex align-items-center">
-                <img class="img-user" src="{{asset('img/user-01.jpg')}}">
                 <h4 class="font-md weight-700 ps-3 mb-0">
-                  John Doe, Improvement Leader<br>
-                  PT. Lorem Ipsum Manufacturing
                 </h4>
+                <img src="{{asset('img/achivements-05.jpg')}}">
+              </div>
+            </div>
+            <div class="p-5 testimony-list">
+              <p class="font-sm">
+                <span>2023</span>
+                Earned a coveted spot as one of 18 finalists in the Batch 7 Startup Studio Indonesia by the Ministry of Communication and Informatica of the Republic of Indonesia (Kemenkominfo RI), underscoring our position at the forefront of deep-tech startup innovation in the region.
+              </p>
+              <div class="d-flex align-items-center">
+                <h4 class="font-md weight-700 ps-3 mb-0">
+                </h4>
+                <img src="{{asset('img/achivements-06.png')}}">
               </div>
             </div>
           </div>

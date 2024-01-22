@@ -209,6 +209,36 @@
           </div>
         </div>
 
+        <div class="bg-primary-neutral-20" id="pabos">
+          <div class="row m-0 list-unstyled solution-list">
+            <div class="col-md-6 p-5">
+              <img src="{{asset('img/product/product-04-initial.png')}}" class="initial img-fluid h-auto">
+              <div class="ps-4">
+                <span class="btn-md btn-black px-3 d-inline-flex align-items-center weight-400">Product & Solution</span>
+                <h2 class="title title-2xl weight-700 mb-0 mt-4">PA'BOS - Productivity Assurance By Optimization & Standardization</h2>
+                <h3 class="title title-lg weight-400 mb-0 mt-3">Productivity vs Efficiency in Manufacture</h3>
+                <p class="mb-0 color-primary-neutral-100 title-sm">Productivity and efficiency, though often used interchangeably, are distinct concepts in manufacturing. Productivity, the output-input ratio, quantifies the quantity of goods produced, involving resources like people, machinery, and materials. Efficiency, in contrast, gauges the proportion of flawless output with minimal waste, emphasizing quality. In a successful operation, a harmonious balance between high productivity and efficiency is crucial. Imagine a scenario with high productivity but low efficiency resulting in frequent rework, or high efficiency but low productivity leading to potential delays and low inventory. Striking this balance is essential for optimal manufacturing performance. Explore the best practices outlined here to navigate this relationship effectively and enhance your manufacturing processes.</p>
+                <h2 class="title title-lg weight-400 mb-0 mt-3">Unlock a 12-Month Money-Back Guarantee if You Don't Achieve a Minimum 10% Productivity Increase</h2>
+                <p class="mb-3 color-primary-neutral-100">Pa'Bos will stand as the most effective entry point for your manufacture to simultaneously increase productivity and maximize efficiency by aligning with the 9 principles of productivity optimization</p> 
+                <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Ensure Seamless Production Kickoff</span></span>
+                <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Precision Timing for Shop Floor Success</span></span>
+                <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Commitment-Driven Prioritization</span></span>
+                <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Transformative Workflow Examination</span></span>
+                <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Strategic Monitoring with Key Metrics</span></span>
+                <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Empower Your Team with Ongoing Training</span></span>
+                <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Supplier Excellence through Strategic Management</span></span>
+                <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Proactive Maintenance for Uninterrupted Operations</span></span>
+                <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Tailored Solutions for Optimal Investment</span></span>
+                <p class="mt-3 mb-3 color-primary-neutral-100">In Pa'Bos, you will get private counseling from our experts along with the smart softwares support since day one.</p>
+                <a href="/consult-date" class="weight-700 d-inline-flex align-items-start title-sm color-primary-neutral-100 text-decoration-none">Learn More<img src="{{asset('img/icon/arrow-right-block.svg')}}" class="ms-2"></a>
+              </div>
+            </div>
+            <div class="col-md-6 p-0">
+              <img src="{{asset('img/product/dropdown/PABOS.jpg')}}" class="object-fit-cover w-100 h-100">
+            </div>
+          </div>
+        </div>
+
         <div class="py-100 software-product bg-primary-neutral-10" id="software">
           <div class="container">
             <div class="d-flex align-items-center">

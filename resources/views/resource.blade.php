@@ -53,13 +53,36 @@
           </div>
         </div>
         <form class="my-5">
-          <h2 class="mb-4 title title-lg color-primary-neutral-100 weight-700 d-flex align-items-center">Leave a Reply</h2>
-          <div class="mb-4">
-            <textarea class="form-control" id="" aria-describedby="" placeholder="Write a comment..." rows="4"></textarea>
+          <h2 class="mb-4 title title-md color-primary-neutral-100 weight-700 d-flex align-items-center">Request for Full Paper Version or Relevant Case Study</h2>
+          <div class="mb-4 col-md-6">
+            <label for="" class="form-label">Full Name*</label>
+            <input type="text" class="form-control" id="" aria-describedby="" placeholder="Your Full Name">
           </div>
-          <div class="d-flex justify-content-end">
-            <button type="submit" class="btn-lg btn-black px-4 d-inline-flex align-items-center position-relative px-5 border-0">Reply</button>
+          <div class="mb-4 col-md-6">
+            <label for="" class="form-label">Company Email*</label>
+            <input type="email" class="form-control" id="" aria-describedby="" placeholder="Your Email">
           </div>
+          <div class="mb-5 col-md-6">
+            <label for="" class="form-label">Company Name*</label>
+            <input type="text" class="form-control" id="" aria-describedby="" placeholder="Your company Name">
+          </div>
+          <div class="mb-5 col-md-6">
+            <label for="" class="form-label">Tell Us Your Needs*</label>
+            <br>
+            <select id="cars" name="carlist" form="carform">
+              <option value="monitoring">Paper</option>
+              <option value="analytics">Case Study</option>
+            </select>
+          </div>
+          <div class="mb-5 col-md-6">
+            <label for="" class="form-label">Other Remarks</label>
+            <input type="text" class="form-control" id="" aria-describedby="" placeholder="Remarks">
+          </div>
+          <p><i>We will send your requests to your company email</i></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button type="submit" class="btn-lg btn-black px-5 d-flex align-items-center position-relative border-0">Send</button>
+          </div>
+          <p><i>* required</i></p>
         </form>
         <hr class="b-bottom-primary-100 border-bottom-0 opacity-100">
         <div class="row justify-content-between my-5">

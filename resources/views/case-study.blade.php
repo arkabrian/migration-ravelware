@@ -17,11 +17,10 @@
                 <div class="wrapper-sticky">
                   <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <button class="nav-link active" id="v-pills-01-tab" data-bs-toggle="pill" data-bs-target="#v-pills-01" type="button" role="tab" aria-controls="v-pills-01" aria-selected="true">All Case Study</button>
-                    <button class="nav-link" id="v-pills-02-tab" data-bs-toggle="pill" data-bs-target="#v-pills-02" type="button" role="tab" aria-controls="v-pills-02" aria-selected="false">Lean Warehousing / Warehouse 4.0</button>
-                    <button class="nav-link" id="v-pills-03-tab" data-bs-toggle="pill" data-bs-target="#v-pills-03" type="button" role="tab" aria-controls="v-pills-03" aria-selected="false">Lean Manufacture / Toyota Production System</button>
-                    <button class="nav-link" id="v-pills-04-tab" data-bs-toggle="pill" data-bs-target="#v-pills-04" type="button" role="tab" aria-controls="v-pills-04" aria-selected="false">Smart Factory / Smart Building4.0</button>
-                    <button class="nav-link" id="v-pills-05-tab" data-bs-toggle="pill" data-bs-target="#v-pills-05" type="button" role="tab" aria-controls="v-pills-05" aria-selected="false">Cyber Security4.0</button>
-                    <button class="nav-link" id="v-pills-06-tab" data-bs-toggle="pill" data-bs-target="#v-pills-06" type="button" role="tab" aria-controls="v-pills-06" aria-selected="false">Mechanical / Contractor & Manufacture Services</button>
+                    <button class="nav-link" id="v-pills-02-tab" data-bs-toggle="pill" data-bs-target="#v-pills-02" type="button" role="tab" aria-controls="v-pills-02" aria-selected="false">Smart Factory Safety System</button>
+                    <button class="nav-link" id="v-pills-03-tab" data-bs-toggle="pill" data-bs-target="#v-pills-03" type="button" role="tab" aria-controls="v-pills-03" aria-selected="false">Smart Logistic System</button>
+                    <button class="nav-link" id="v-pills-04-tab" data-bs-toggle="pill" data-bs-target="#v-pills-04" type="button" role="tab" aria-controls="v-pills-04" aria-selected="false">Fleet Parking Management System</button>
+                    <button class="nav-link" id="v-pills-05-tab" data-bs-toggle="pill" data-bs-target="#v-pills-05" type="button" role="tab" aria-controls="v-pills-05" aria-selected="false">Smart Lighting System</button>
                   </div>
                 </div>
               </div>
@@ -29,29 +28,33 @@
                 <div class="tab-content" id="v-pills-tabContent">
                   <div class="tab-pane fade show active" id="v-pills-01" role="tabpanel" aria-labelledby="v-pills-01-tab" tabindex="0">
                     <div class="d-flex align-items-center justify-content-between mb-5">
-                      <form>
+                      {{-- <form>
                         <div class="form-search position-relative">
                           <input type="text" class="form-control" placeholder="Search Case Study" name="">
                           <button type="submit"><img src="{{asset('img/icon/search-normal.svg')}}"></button>
                         </div>
-                      </form>
+                      </form> --}}
                       <p class="mb-0 weight-700">20 Case Studies Result</p>
                     </div>
                     <h2 class="title title-lg weight-700 mb-5">All Case Study</h2>
                     <ul class="list-unstyled list-resource row">
+                      @foreach($case_studies->reverse() as $case_study)
                       <li class="col-md-6">
                         <div class="general-card">
                           <a href="" class="card border-0 text-decoration-none">
                             <img src="{{asset('img/product/resource-01.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Fleet Parking Management System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">Ravelfleet is one of the solution for activities in the industry. The purpose of our system is to provide a system which can monitor the activity of the truck inside factory parking area and automate the administration process for the fleet activity report.</p>
+                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">{{ $case_study['title'] }}</h2>
+                              {{-- <p class="mb-0 mb-4 text-wrap border-0 info">Ravelfleet is one of the solution for activities in the industry. The purpose of our system is to provide a system which can monitor the activity of the truck inside factory parking area and automate the administration process for the fleet activity report.</p> --}}
+                              <p class="mb-0 mb-4 text-wrap border-0 info">
+                                @if (preg_match("/<p>(.*?)<\/p>/s", $case_study['overview'], $matches))
+                                  @php
+                                      $content = strip_tags($matches[0]); // Extract content within <p> tags and remove HTML tags
+                                      $trimmed_content = mb_substr($content, 0, 285); // Trim content to 285 characters
+                                      $display_content = strlen($trimmed_content) < 285 ? $trimmed_content : rtrim($trimmed_content) . '...'; // Add ellipsis if content is longer
+                                  @endphp
+                                  {!! $display_content !!}
+                              @endif
                               <div class="d-flex justify-content-between b-top-primary-100 pt-4">
                                 <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
                               </div>
@@ -59,209 +62,235 @@
                           </a>
                         </div>
                       </li>
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="resources-detail.html" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-02.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Smart Logistic System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">Ravellog is a Smart Logistic System which integrate RFID technology and Internet of Things technology. It could be integrated with Lean Manufacture, Lean Warehousing or Toyota Production System in the company</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="resources-detail.html" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-03.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Smart Factory Safety System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">The concern of safety in the industry is one of the top management priority. Inside the factory, there are lots of forklifts, gates and area which its safety aspect needs to be improve.Ravelzen is a comprehensive solution which focused on increasing the safety of the work environment of your company.</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="resources-detail.html" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-02.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Smart Logistic System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">Ravellog is a Smart Logistic System which integrate RFID technology and Internet of Things technology. It could be integrated with Lean Manufacture, Lean Warehousing or Toyota Production System in the company</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
+                      @endforeach
                     </ul>
-                    <div class="d-flex justify-content-end bold-pagination">
-                      <nav aria-label="">
-                        <ul class="pagination">
-                          <li class="page-item prev disabled">
-                            <a class="page-link"><img src="{{asset('img/icon/arrow-circle-right.svg')}}"></a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="#">2</a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item next">
-                            <a class="page-link" href="#"><img src="{{asset('img/icon/arrow-circle-right.svg')}}"></a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
                   </div>
 
                   <div class="tab-pane fade" id="v-pills-02" role="tabpanel" aria-labelledby="v-pills-02-tab" tabindex="0">
-                    <div class="d-flex align-items-center justify-content-between mb-5">
-                      <form>
-                        <div class="form-search position-relative">
-                          <input type="text" class="form-control" placeholder="Search Case Study" name="">
-                          <button type="submit"><img src="{{asset('img/icon/search-normal.svg')}}"></button>
+                    <h2 class="title title-lg weight-700 mb-3">Smart Factory Safety System</h2>
+                    <div id="carouselExampleIndicators" class="carousel slide col-md-6" data-bs-ride="true">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="https://www.ravelware.co/images/image_solution/preview/WhatsApp%20Image%202019-09-10%20at%2010.26.57%20AM%20(4).jpeg" alt="First slide">
                         </div>
-                      </form>
-                      <p class="mb-0 weight-700">20 Case Studies Result</p>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-09-10%20at%2010.26.57%20AM%20(4).jpeg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-09-10%20at%2010.26.57%20AM%20(3).jpeg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-09-10%20at%2010.26.55%20AM.jpeg" alt="Fourth slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-09-10%20at%2010.26.55%20AM%20(1).jpeg" alt="Fifth slide">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
                     </div>
-                    <h2 class="title title-lg weight-700 mb-5">Lean Warehousing / Warehouse 4.0</h2>
-                    <p class="mb-5">Warehousing is one of the essential activity in any factory. In Industry 4.0, it is necessary to improve the efficiency and speed of warehousing activity so that it can match the ever-changing needs of the market. Below are our solution for lean warehousing.</p>
-                    <ul class="list-unstyled list-resource row">
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-01.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Fleet Parking Management System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">Ravelfleet is one of the solution for activities in the industry. The purpose of our system is to provide a system which can monitor the activity of the truck inside factory parking area and automate the administration process for the fleet activity report.</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2 mt-5">Overview</h3>
+                      <p>The concern of safety in the industry is one of the top management priorities. Inside the factory, there are lots of forklifts, gates, and areas where safety aspects need improvement. Ravelzen is a comprehensive solution that focuses on increasing the safety of the work environment in your company.</p>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2">Issue</h3>
+                      <p>We integrated forklift automation, rolling door, and authentication technology. With our innovation, we can address the following issues:</p>
+                        <ol>
+                            <li><p>Increase the safety of the forklifts to minimize collisions between forklifts or with humans.</p></li>
+                            <li><p>Minimize unauthorized personnel from entering desired areas.</p></li>
+                            <li><p>Improve the Standard Operational Procedure (SOP) of areas that need to assort the working elements.</p></li>
+                        </ol>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2">Solution</h3>
+                      <p>Ravelzen offers solutions through the integration of forklift automation, rolling door, and authentication technology to achieve the following:</p>
+                      <ul class="list-number">
+                        <li><p>Enhanced safety for forklifts to reduce collisions.</p></li>
+                        <li><p>Restriction of unauthorized personnel from entering specific areas.</p></li>
+                        <li><p>Improvement in Standard Operational Procedures (SOP) for better organization of working elements.</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="tab-pane fade" id="v-pills-03" role="tabpanel" aria-labelledby="v-pills-03-tab" tabindex="0">
+                    <h2 class="title title-lg weight-700 mb-3">Smart Logistic System</h2>
+                    <div id="carouselExampleIndicators" class="carousel slide col-md-6" data-bs-ride="true">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="https://www.ravelware.co/images/image_solution/preview/Screen%20Shot%202019-09-10%20at%2010.34.59.png" alt="First slide">
                         </div>
-                      </li>
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="resources-detail.html" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-02.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Smart Logistic System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">Ravellog is a Smart Logistic System which integrate RFID technology and Internet of Things technology. It could be integrated with Lean Manufacture, Lean Warehousing or Toyota Production System in the company</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-09-10%20at%2010.55.24%20AM.jpeg" alt="Second slide">
                         </div>
-                      </li>
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="resources-detail.html" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-03.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Smart Factory Safety System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">The concern of safety in the industry is one of the top management priority. Inside the factory, there are lots of forklifts, gates and area which its safety aspect needs to be improve.Ravelzen is a comprehensive solution which focused on increasing the safety of the work environment of your company.</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/Screen%20Shot%202019-09-10%20at%2010.35.34.png" alt="Third slide">
                         </div>
-                      </li>
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="resources-detail.html" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-02.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Smart Logistic System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">Ravellog is a Smart Logistic System which integrate RFID technology and Internet of Things technology. It could be integrated with Lean Manufacture, Lean Warehousing or Toyota Production System in the company</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-09-10%20at%2010.26.56%20AM%20(3).jpeg" alt="Fourth slide">
                         </div>
-                      </li>
-                    </ul>
-                    <div class="d-flex justify-content-end">
-                      <nav aria-label="" class="bold-pagination">
-                        <ul class="pagination">
-                          <li class="page-item prev disabled">
-                            <a class="page-link"><img src="{{asset('img/icon/arrow-circle-right.svg')}}"></a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="#">2</a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item next">
-                            <a class="page-link" href="#"><img src="{{asset('img/icon/arrow-circle-right.svg')}}"></a>
-                          </li>
-                        </ul>
-                      </nav>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2 mt-5">Overview</h3>
+                      <p>Ravellog is a Smart Logistic System that integrates RFID technology and Internet of Things (IoT) technology. It can be seamlessly integrated with Lean Manufacturing, Lean Warehousing, or the Toyota Production System within a company. This lean-focused solution aims to increase accuracy, reduce human error, and decrease the cycle time of logistics activities.</p>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2">Issue</h3>
+                      <p>The primary goals of Ravellog are to address the following issues in the logistics domain:</p>
+                        <ol>
+                            <li><p>Increasing accuracy in logistics operations.</p></li>
+                            <li><p>Reducing human errors associated with logistic activities.</p></li>
+                            <li><p>Decreasing the cycle time of logistics processes within the company.</p></li>
+                        </ol>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2">Solution</h3>
+                      <p>The impact which we offer in our solution are :/p>
+                      <ul class="list-number">
+                        <li><p>Seamless integration with legacy or existing applications in our client's system.</p></li>
+                        <li><p>Option to operate as a standalone system, providing flexibility in implementation.</p></li>
+                      </ul>
                     </div>
                   </div>
 
+                  <div class="tab-pane fade" id="v-pills-04" role="tabpanel" aria-labelledby="v-pills-04-tab" tabindex="0">
+                    <h2 class="title title-lg weight-700 mb-5">Fleet Parking Management System</h2>
+                    <div id="carouselExampleIndicators" class="carousel slide col-md-6" data-bs-ride="true">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-08-23%20at%208.27.05%20PM.jpeg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-08-23%20at%208.27.35%20PM.jpeg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-08-23%20at%208.27.58%20PM.jpeg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-08-23%20at%208.25.44%20PM%20(1).jpeg" alt="Fourth slide">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2">Overview</h3>
+                      <p>Ravelfleet is a comprehensive solution designed for industry activities, specifically focusing on monitoring truck activities within the factory parking area and automating the administration process for fleet activity reporting.</p>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2">Issue</h3>
+                      <p>The key issues addressed by Ravelfleet include the need for:</p>
+                        <ol>
+                            <li><p>Monitoring truck activities efficiently within the factory parking area.</p></li>
+                            <li><p>Streamlining and automating the administration process for fleet activity reports.</p></li>
+                        </ol>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2">Solution</h3>
+                      <p>Ravelfleet offers impactful solutions that include:</p>
+                      <ul class="list-number">
+                        <li><p>Faster data input for improved efficiency.</p></li>
+                        <li><p>Optimized parking and loading processes, reducing time and enhancing efficiency.</p></li>
+                        <li><p>Shifting from reactive management to progress management in fleet activity.</p></li>
+                        <li><p>Minimizing human errors in the administration process.</p></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v-pills-05" role="tabpanel" aria-labelledby="v-pills-05-tab" tabindex="0">
+                    <h2 class="title title-lg weight-700 mb-5">Smart Lighting System</h2>
+                    <div id="carouselExampleIndicators" class="carousel slide col-md-6" data-bs-ride="true">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="https://www.ravelware.co/images/image_solution/preview/WhatsApp%20Image%202019-08-23%20at%207.59.11%20PM.jpeg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/sega-2.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/WhatsApp%20Image%202019-08-23%20at%207.59.30%20PM.jpeg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="https://www.ravelware.co/storage/images/image_solution/original/download.jpeg" alt="Fourth slide">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2">Overview</h3>
+                      <p>The Smart Lighting System goes beyond typical remote-controlled lighting by offering dynamic adaptive operational levels. Unlike common LEDs and Traditional Lightings that are either on or off, our innovation focuses on maintaining stable lux levels in designated areas based on specific requests. The primary goal of this smart lighting solution is to enhance productivity, safety, energy efficiency, and user comfort in industrial and workplace settings.</p>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2">Issue</h3>
+                      <p>The challenges addressed by the Smart Lighting System include the limitations of common LEDs and Traditional Lightings, which lack dynamic adaptive operational levels. Additionally, the importance of good lighting for optical task performance in the workplace, especially considering a progressively aging workforce, is recognized.</p>
+                    </div>
+                    <div class="mb-5">
+                      <h3 class="title title-md weight-700 mb-2">Solution</h3>
+                      <p>The Smart Lighting System provides innovative solutions to these challenges, aiming to:</p>
+                      <ul class="list-number">
+                        <li><p>Maintain stable lux levels in designated areas to meet specific requests.</p></li>
+                        <li><p>Enhance productivity, safety, and comfort in industrial and workplace environments.</p></li>
+                        <li><p>Achieve energy savings through efficient lighting practices.</p></li>
+                      </ul>
+                    </div>
+                  </div>
+
+{{-- 
                   <div class="tab-pane fade" id="v-pills-03" role="tabpanel" aria-labelledby="v-pills-03-tab" tabindex="0">
                     <div class="d-flex align-items-center justify-content-between mb-5">
-                      <form>
-                        <div class="form-search position-relative">
-                          <input type="text" class="form-control" placeholder="Search Case Study" name="">
-                          <button type="submit"><img src="{{asset('img/icon/search-normal.svg')}}"></button>
-                        </div>
-                      </form>
-                      <p class="mb-0 weight-700">20 Case Studies Result</p>
-                    </div>
                     <h2 class="title title-lg weight-700 mb-5">Lean Manufacture / Toyota Production System</h2>
                     <p class="mb-5">Warehousing is one of the essential activity in any factory. In Industry 4.0, it is necessary to improve the efficiency and speed of warehousing activity so that it can match the ever-changing needs of the market. Below are our solution for lean warehousing.</p>
                     <ul class="list-unstyled list-resource row">
@@ -589,121 +618,41 @@
                         </ul>
                       </nav>
                     </div>
-                  </div>
-
-                  <div class="tab-pane fade" id="v-pills-06" role="tabpanel" aria-labelledby="v-pills-06-tab" tabindex="0">
-                    <div class="d-flex align-items-center justify-content-between mb-5">
-                      <form>
-                        <div class="form-search position-relative">
-                          <input type="text" class="form-control" placeholder="Search Case Study" name="">
-                          <button type="submit"><img src="{{asset('img/icon/search-normal.svg')}}"></button>
-                        </div>
-                      </form>
-                      <p class="mb-0 weight-700">20 Case Studies Result</p>
+                  </div> --}}
+                  <form class="my-5">
+                    <h2 class="mb-4 title title-md color-primary-neutral-100 weight-700 d-flex align-items-center">Request for Full Paper Version or Relevant Case Study</h2>
+                    <div class="mb-4 col-md-6">
+                      <label for="" class="form-label">Full Name*</label>
+                      <input type="text" class="form-control" id="" aria-describedby="" placeholder="Your Full Name">
                     </div>
-                    <h2 class="title title-lg weight-700 mb-5">Mechanical / Contractor & Manufacture Services</h2>
-                    <p class="mb-5">Warehousing is one of the essential activity in any factory. In Industry 4.0, it is necessary to improve the efficiency and speed of warehousing activity so that it can match the ever-changing needs of the market. Below are our solution for lean warehousing.</p>
-                    <ul class="list-unstyled list-resource row">
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-01.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Fleet Parking Management System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">Ravelfleet is one of the solution for activities in the industry. The purpose of our system is to provide a system which can monitor the activity of the truck inside factory parking area and automate the administration process for the fleet activity report.</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="resources-detail.html" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-02.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Smart Logistic System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">Ravellog is a Smart Logistic System which integrate RFID technology and Internet of Things technology. It could be integrated with Lean Manufacture, Lean Warehousing or Toyota Production System in the company</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="resources-detail.html" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-03.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Smart Factory Safety System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">The concern of safety in the industry is one of the top management priority. Inside the factory, there are lots of forklifts, gates and area which its safety aspect needs to be improve.Ravelzen is a comprehensive solution which focused on increasing the safety of the work environment of your company.</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="col-md-6">
-                        <div class="general-card">
-                          <a href="resources-detail.html" class="card border-0 text-decoration-none">
-                            <img src="{{asset('img/product/resource-02.jpg')}}" class="card-img-top" alt="...">
-                            <div class="card-body pt-4 px-0">
-                              <div class="tags d-flex align-items-center mb-4">
-                                <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Case Study</label></li>
-                                  <li><input type="checkbox" id="" checked="" readonly=""><label for="" class="weight-400">Lean Warehousing/Warehouse 4.0</label></li>
-                                </ul>
-                              </div>
-                              <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Smart Logistic System</h2>
-                              <p class="mb-0 mb-4 text-wrap border-0 info">Ravellog is a Smart Logistic System which integrate RFID technology and Internet of Things technology. It could be integrated with Lean Manufacture, Lean Warehousing or Toyota Production System in the company</p>
-                              <div class="d-flex justify-content-between b-top-primary-100 pt-4">
-                                <span class="title-sm weight-700 d-flex justify-content-between w-100">Read More Solution <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
-                    <div class="d-flex justify-content-end">
-                      <nav aria-label="" class="bold-pagination">
-                        <ul class="pagination">
-                          <li class="page-item prev disabled">
-                            <a class="page-link"><img src="{{asset('img/icon/arrow-circle-right.svg')}}"></a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="#">2</a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item next">
-                            <a class="page-link" href="#"><img src="{{asset('img/icon/arrow-circle-right.svg')}}"></a>
-                          </li>
-                        </ul>
-                      </nav>
+                    <div class="mb-4 col-md-6">
+                      <label for="" class="form-label">Company Email*</label>
+                      <input type="email" class="form-control" id="" aria-describedby="" placeholder="Your Email">
                     </div>
-                  </div>
+                    <div class="mb-5 col-md-6">
+                      <label for="" class="form-label">Company Name*</label>
+                      <input type="text" class="form-control" id="" aria-describedby="" placeholder="Your company Name">
+                    </div>
+                    <div class="mb-5 col-md-6">
+                      <label for="" class="form-label">Tell Us Your Needs*</label>
+                      <br>
+                      <select id="cars" name="carlist" form="carform">
+                        <option value="monitoring">Paper</option>
+                        <option value="analytics">Case Study</option>
+                      </select>
+                    </div>
+                    <div class="mb-5 col-md-6">
+                      <label for="" class="form-label">Other Remarks</label>
+                      <input type="text" class="form-control" id="" aria-describedby="" placeholder="Remarks">
+                    </div>
+                    <p><i>We will send your requests to your company email</i></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <button type="submit" class="btn-lg btn-black px-5 d-flex align-items-center position-relative border-0">Send</button>
+                    </div>
+                    <p><i>* required</i></p>
+                  </form>
                 </div>
+
               </div>
             </div>
           </div>
@@ -717,7 +666,7 @@
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
   <script src="assets/js/jquery.sticky-sidebar.js"></script>
-  
+  <script type="text/javascript" src="js/mdb.umd.min.js"></script>
   <script>
   $('.case-study .left').stickySidebar({
       topSpacing: 100,

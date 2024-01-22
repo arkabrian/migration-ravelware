@@ -6,28 +6,48 @@ use App\Models\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
-class ResourceController extends Controller{
+class ResourceController extends Controller
+{
+    //Show all resource
+    public function index(){
+        return view('resources', [
+            'resources' => Resources::all()
+        ]);
+    }
 
-  //Show all resources
-  public function index() {
+    public function create() {
+        return view('post-resource');
+    }
 
-    return view('resources.index', [
-      'resources' => Resources::latest()->filter(request(['tag', 'search']))->paginate(6)
-    ]);
-  }
 
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'type' => 'required',
+            'title' => 'required',
+            'img-path' => 'required',
+            'tags' => 'required',
+            'date' => 'required',
+            'content' => 'required'
+        ]);
+
+        $formFields['identifier'] = strtolower(str_replace(' ', '-', preg_replace('/[^A-Za-z0-9\-]/', '', $formFields['title'])));
+
+        Resources::create($formFields);
+
+        return redirect('/')->with('message', 'Article/News created successfully!');
+    }
+
+    public function destroy(Resources $resource) {
+        // Make sure logged in user is owner
+        // if($listing->user_id != auth()->id()) {
+        //     abort(403, 'Unauthorized Action');
+        // }
+        
+        // if($listing->logo && Storage::disk('public')->exists($listing->logo)) {
+        //     Storage::disk('public')->delete($listing->logo);
+        // }
+        
+        $resource->delete();
+        return redirect('/')->with('message', 'Listing deleted successfully');
+    }
 }
-
-// public function index()
-// {
-//     // Fetch hardcoded resources
-    // $allResources = Resources::all();
-
-    // $perPage = 5; // Number of articles to load per page
-    // $currentPage = request()->get('page') ?? 1; // Get the current page from the URL query parameter
-
-    // $offset = ($currentPage - 1) * $perPage;
-    // $resources = $allResources->slice($offset, $perPage)->values(); // Slice the collection based on pagination
-
-//     return view('resources.index', compact('resources'));
-// }

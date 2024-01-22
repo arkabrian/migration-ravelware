@@ -1,7 +1,7 @@
 <div class="col-md-4 ps-5">
   <h2 class="mb-4 title title-lg color-primary-neutral-100 weight-700 d-flex align-items-center">Recent Post</h2>
   <ul class="list-unstyled mb-0 list-recent-post">
-    @foreach($resources as $resource)
+    @foreach($resources->reverse() as $resource)
     <li>
       <div class="general-card">
         <a href="resources/{{ $resource['id']}}" class="card border-0 text-decoration-none">

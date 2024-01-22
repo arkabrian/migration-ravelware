@@ -10,6 +10,15 @@ class Resources extends Model
     use HasFactory;
     public $timestamps = false;
 
+    protected $fillable = [
+        'type',
+        'title',
+        'img-path',
+        'tags',
+        'date',
+        'content'
+    ];
+
     public static function findIdentifier($identifier){
         $resources = self::all();
 
@@ -18,5 +27,9 @@ class Resources extends Model
                 return $resource;
             }
         }
+    }
+
+    public function scopeFilter($query, array $filters){
+        
     }
 }

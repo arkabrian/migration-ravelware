@@ -73,11 +73,11 @@
           <div class="container">
             <div class="row" id="counter">
               <div class="col-md-3 text-center">
-                <h2 class="title title-3xl color-primary-neutral-10 line-height-normal weight-700"><span>7</span>+</h2>
+                <h2 class="title title-3xl color-primary-neutral-10 line-height-normal weight-700"><span>8</span>+</h2>
                 <p class="mb-0 title color-primary-neutral-10 title-lg weight-700">Operated Years</p>
               </div>
               <div class="col-md-3 text-center">
-                <h2 class="title title-3xl color-primary-neutral-10 line-height-normal weight-700"><span>18</span>+</h2>
+                <h2 class="title title-3xl color-primary-neutral-10 line-height-normal weight-700"><span>21</span>+</h2>
                 <p class="mb-0 title color-primary-neutral-10 title-lg weight-700">Our Teams</p>
               </div>
               <div class="col-md-3 text-center">
@@ -92,7 +92,7 @@
           </div>
         </div>
 
-        <div class="our-history">
+        <div class="our-history mb-5">
           <div class="container">
             <div class="row">
               <div class="col-md-12">
@@ -185,7 +185,7 @@
                           <div class="timeline-body">
                             <div class="box">
                               <h4 class="title title-2xl weight-700">2022</h4>
-                              <p>Go Austria 2022 Spring and Fall Program (Austria Government Program)</p>
+                              <p><b>The only and first Indonesian Startup</b> selected in <b>Go Austria, </b> Ravelware RnD Center In Austria Establishment</p>
                             </div>
                           </div>
                         </div>
@@ -202,7 +202,25 @@
                           <div class="timeline-body">
                             <div class="box">
                               <h4 class="title title-2xl weight-700">2023</h4>
-                              <p>Ravelware RnD Center In Austria Establishment (Target 2023)</p>
+                              <p>
+                                The <b>only tech local company </b>to support METI Japan for successing <b>Lean Monozukuri Program 4.0</b> in 2023 & <b>New Midec</b> 2024
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-item top">
+                      <div class="timeline-box-body">
+                        <div class="timeline-badge">
+                          <span class="bullet"></span>
+                        </div>
+
+                        <div class="timeline-panel">
+                          <div class="timeline-body">
+                            <div class="box">
+                              <h4 class="title title-2xl weight-700">2024</h4>
+                              <p><b>Graphene</b> new market tap-in launched</p>
                             </div>
                           </div>
                         </div>

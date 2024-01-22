@@ -61,8 +61,17 @@
                 <div class="row mt-5">
                   <div class="col-md-8">
                     <ul id="resourceContainer" class="list-unstyled list-resource">
-                      @foreach($resources as $resource)
-                        @include('components.resources-display')
+                      @php
+                        $selectedTag = isset($_GET['tag']) ? $_GET['tag'] : 'All';
+                      @endphp
+                      @foreach($resources->reverse() as $resource)
+                        @php
+                            $resourceTags = explode(',', $resource->tags);
+                            $showResource = ($selectedTag === 'All') || in_array($selectedTag, $resourceTags);
+                        @endphp
+                        @if($showResource)
+                            @include('components.resources-display')
+                        @endif
                       @endforeach
                     </ul>
                   </div>
@@ -87,7 +96,7 @@
                 <div class="row mt-5">
                   <div class="col-md-8">
                     <ul class="list-unstyled list-resource">
-                      @foreach($resources as $resource)
+                      @foreach($resources->reverse() as $resource)
                         @if($resource['type'] === 'article')
                           @include('components.resources-display')
                         @endif
@@ -115,7 +124,7 @@
                 <div class="row mt-5">
                   <div class="col-md-8">
                     <ul class="list-unstyled list-resource">
-                      @foreach($resources as $resource)
+                      @foreach($resources->reverse() as $resource)
                         @if($resource['type'] === 'news')
                           @include('components.resources-display')
                         @endif
@@ -125,6 +134,10 @@
                   @include('components.resources-side-display')
                 </div>
               </div>
+
+              @auth
+              <a href="/contact" class="btn-lg btn-black px-4 d-flex align-items-center position-relative">Add Article</a>
+              @endauth
 
             </div>
           </div>
@@ -137,23 +150,21 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
-    let page = 1; // Track the current page
-    const perPage = 5; // Number of articles to load per page
-  
-    $(window).scroll(function() {
-      if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
-        $.ajax({
-          url: '/load-more-articles?page=' + page,
-          method: 'GET',
-          dataType: 'html',
-          success: function(data) {
-            $('#articleContainer').append(data);
-            page++; // Increment the page count for the next load
-          }
-        });
-      }
-    });
+      $(document).ready(function () {
+          // When any checkbox is clicked
+          $("[type='checkbox']").click(function () {
+              // Uncheck all checkboxes
+              $("[type='checkbox']").prop("checked", false);
+
+              // If the clicked checkbox is not the "All" checkbox
+              if ($(this).attr("id") !== "tags-01") {
+                  // Check the clicked checkbox
+                  $(this).prop("checked", true);
+              }
+          });
+      });
   </script>
   
 

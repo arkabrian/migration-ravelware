@@ -7,7 +7,7 @@
         </div>
         <div class="col-md-6">
           <div class="d-flex justify-content-end sm-justify-content-start sm-mt-3">
-            <a href="" class="color-primary-neutral-10 weight-700 text-decoration-none title title-xl">Let’s Talk <img src="{{asset('img/icon/arrow-right-white.svg')}}"></a>
+            <a href="/contact" class="color-primary-neutral-10 weight-700 text-decoration-none title title-xl">Let’s Talk <img src="{{asset('img/icon/arrow-right-white.svg')}}"></a>
           </div>
         </div>
       </div>

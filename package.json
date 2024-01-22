@@ -1,16 +1,9 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build --output public"
-    },
+    "name": "mdb-standard-app",
+    "version": "7.1.0",
+    "homepage": "https://mdbootstrap.com/docs/standard/",
+    "license": "MIT",
     "devDependencies": {
-        "axios": "^1.1.2",
-        "laravel-vite-plugin": "^0.8.0",
-        "vite": "^4.0.0"
-    },
-    "dependencies": {
-        "vercel": "^33.1.0"
+        "trix": "^1.3.1"
     }
 }
