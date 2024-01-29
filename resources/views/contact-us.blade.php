@@ -103,7 +103,7 @@
                 <h2 class="mb-0 title title-lg text-uppercase color-primary-neutral-10">Get more done with the right package</h2>
               </div>
               <div class="col-md-6 d-flex justify-content-end align-items-center">
-                <a href="" class="d-inline-flex btn-lg align-items-center btn-white-outline px-4 position-relative text-decoration-none">Consultation Now <img src="{{asset('img/icon/arrow-right-white-sm.svg')}}" class="ms-2"></a>
+                <a href="/consultation" class="d-inline-flex btn-lg align-items-center btn-white-outline px-4 position-relative text-decoration-none">Consultation Now <img src="{{asset('img/icon/arrow-right-white-sm.svg')}}" class="ms-2"></a>
               </div>
             </div>
           </div>

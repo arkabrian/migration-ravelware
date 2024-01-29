@@ -34,13 +34,6 @@ Route::get('/contact', function () {
 //     return view('resources');
 // });
 
-Route::get('/case-study', [CaseStudyController::class, 'index']);
-Route::get('/case-study/{id}', function ($id) {
-    return view('case_study', [
-        'case_study' => CaseStudy::find($id)
-    ]);
-});
-
 Route::get('/consultation', function () {
     return view('consultation');
 });
@@ -71,8 +64,9 @@ Route::get('/admin-post', [ResourceController::class, 'create'])->middleware('au
 Route::post('/ngeposting', [ResourceController::class, 'store'])->middleware('auth');
 // Route::delete('/ngedelete/{resource}', [ResourceController::class, 'destroy'])->middleware('auth');
 
-Route::get('cs-post', [CaseStudyController::class, 'create'])->middleware('auth');
-Route::post('cs-posting', [CaseStudyController::class, 'store'])->middleware('auth');
+Route::get('/cs-post', [CaseStudyController::class, 'create'])->middleware('auth');
+Route::post('/cs-posting', [CaseStudyController::class, 'store'])->middleware('auth');
+Route::get('/case-study', [CaseStudyController::class, 'index']);
 Route::get('/case-study/{id}', function($id) {
     return view('case-study', [
         'case-study' => CaseStudy::find($id)

@@ -16,8 +16,8 @@
                   <h2 class="title title-xl text-uppercase">UNLEASHING GROWTH, PRODUCTIVITY, AND EFFICIENCY WITH ONE SOLUTION</h2>
                   <p class="my-4">Discover our IoT automation platform, designed to reveal and tackle hidden inefficiencies on the production line, empower your team, and deliver outstanding results in a single move.</p>
                   <div class="d-flex align-items-center">
-                    <a href="" class="btn-lg btn-black px-4 d-flex align-items-center">Book Consultation & Demo</a>
-                    <a href="" class="ms-4 color-primary-neutral-100 weight-700 text-decoration-none d-flex align-items-center">Explore More <img src="{{asset('img/icon/arrow-right.svg')}}" class="ms-2"></a>
+                    <a href="/consult-date" class="btn-lg btn-black px-4 d-flex align-items-center">Book Consultation & Demo</a>
+                    <a href="/products" class="ms-4 color-primary-neutral-100 weight-700 text-decoration-none d-flex align-items-center">Explore More <img src="{{asset('img/icon/arrow-right.svg')}}" class="ms-2"></a>
                   </div>
                 </div>
               </div>
@@ -33,8 +33,8 @@
                   <h2 class="title title-xl text-uppercase">EMBRACE KAIZEN WITH OUR SMART AUTOMATION</h2>
                   <p class="my-4">Boost efficiency in manufacturing, warehousing, and logistics. Achieve more with less.</p>
                   <div class="d-flex align-items-center">
-                    <a href="" class="btn-lg btn-black px-4 d-flex align-items-center">Book Consultation & Demo</a>
-                    <a href="" class="ms-4 color-primary-neutral-100 weight-700 text-decoration-none d-flex align-items-center">Explore More <img src="{{asset('img/icon/arrow-right.svg')}}" class="ms-2"></a>
+                    <a href="/consult-date" class="btn-lg btn-black px-4 d-flex align-items-center">Book Consultation & Demo</a>
+                    <a href="/products" class="ms-4 color-primary-neutral-100 weight-700 text-decoration-none d-flex align-items-center">Explore More <img src="{{asset('img/icon/arrow-right.svg')}}" class="ms-2"></a>
                   </div>
                 </div>
               </div>
@@ -50,8 +50,8 @@
                   <h2 class="title title-xl text-uppercase">ROBUST BIG DATA SOLUTIONS FOR EFFORTLESS MONITORING</h2>
                   <p class="my-4">Leverage our expertise in crafting customized, user-friendly software to scale your business today.</p>
                   <div class="d-flex align-items-center">
-                    <a href="" class="btn-lg btn-black px-4 d-flex align-items-center">Book Consultation & Demo</a>
-                    <a href="" class="ms-4 color-primary-neutral-100 weight-700 text-decoration-none d-flex align-items-center">Explore More <img src="{{asset('img/icon/arrow-right.svg')}}" class="ms-2"></a>
+                    <a href="/consult-date" class="btn-lg btn-black px-4 d-flex align-items-center">Book Consultation & Demo</a>
+                    <a href="/products" class="ms-4 color-primary-neutral-100 weight-700 text-decoration-none d-flex align-items-center">Explore More <img src="{{asset('img/icon/arrow-right.svg')}}" class="ms-2"></a>
                   </div>
                 </div>
               </div>
@@ -654,7 +654,7 @@
             </div>
           </div>
           <div class="slick-testimony mt-5">
-            <div class="p-5 testimony-list">
+            <div class="p-5 testimony-list d-flex align-items-start flex-column">
               <span>2022</span>
               <p class="font-sm">
                 Became the premier Indonesian company amongst 17 startups in the esteemed Global Incubator Network by the Austrian Government. This acknowledgment not only facilitated the establishment of Ravelware’s R&D Centre in Austria but also spearheaded our international business expansion into the Austrian and broader European market, pushing the boundaries of Industry 4.0 solutions.
@@ -665,7 +665,7 @@
                 <img src="{{asset('img/achivements-03.jpg')}}">
               </div>
             </div>
-            <div class="p-5 testimony-list">
+            <div class="p-5 testimony-list d-flex align-items-start flex-column">
               <span>2023</span>
               <p class="font-sm">
                 Handpicked for a special visit to JETRO Japan, marking our integration into the Japanese industry ecosystem in Indonesia.
@@ -676,7 +676,7 @@
                 <img src="{{asset('img/achivements-04.jpg')}}">
               </div>
             </div>
-            <div class="p-5 testimony-list">
+            <div class="p-5 testimony-list d-flex align-items-start flex-column">
               <p class="font-sm">
                 <span>2023</span>
                 Carved a niche as an exclusive local-tech partner in the collaboration between the Minister of Economic, Trade, Industry (METI) Japan and the Ministry of Industry of the Republic of Indonesia (Kemenperin RI) for the Lean Monozukuri program. This aligns with the PIDI 4.0 roadmap propelling the Indonesia 4.0 initiative, reaffirming our commitment to smart logistic solutions and intelligent manufacture systems (IMS).

@@ -26,12 +26,13 @@ class ResourceController extends Controller
             'title' => 'required',
             'tags' => 'required',
             'date' => 'required',
-            'content' => 'required'
+            'content' => 'required',
+            'img-path' => 'required'
         ]);
 
-        if($request->hasFile('img-path')) {
-            $formFields['img-path'] = $request->file('img-path')->store('thumbnail', 'public');
-        }
+        // if($request->hasFile('img-path')) {
+        //     $formFields['img-path'] = $request->file('img-path')->store('thumbnail', 'public');
+        // }
 
         $formFields['identifier'] = strtolower(str_replace(' ', '-', preg_replace('/[^A-Za-z0-9\-]/', '', $formFields['title'])));
 

@@ -49,26 +49,26 @@
             <div class="col-md-5">
               <h3 class="mb-3 title-sm color-primary-neutral-10 weight-700 d-flex align-items-center">Product & Solutions</h3>
               <ul class="list-unstyled">
-                <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">Intelligent Manufacture System</a></li>
-                <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">Software Capability</a></li>
-                <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">Hardware Supply</a></li>
+                <li class="mb-3"><a href="/products#ims" class="font-sm color-primary-neutral-10 text-decoration-none">Intelligent Manufacture System</a></li>
+                <li class="mb-3"><a href="/products#pabos" class="font-sm color-primary-neutral-10 text-decoration-none">Productivity Assurance By Optimization & Standardization</a></li>
+                <li class="mb-3"><a href="/products#software" class="font-sm color-primary-neutral-10 text-decoration-none">Software Capability</a></li>
+                <li class="mb-3"><a href="/products#hardware" class="font-sm color-primary-neutral-10 text-decoration-none">Hardware Supply</a></li>
               </ul>
             </div>
             <div class="col-md-4">
               <h3 class="mb-3 title-sm color-primary-neutral-10 weight-700 d-flex align-items-center">Company</h3>
               <ul class="list-unstyled">
-                <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">About Us</a></li>
-                <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">Consultacy</a></li>
-                <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">Career</a></li>
-                <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">Partner</a></li>
+                <li class="mb-3"><a href="/about-us" class="font-sm color-primary-neutral-10 text-decoration-none">About Us</a></li>
+                <li class="mb-3"><a href="/consultation" class="font-sm color-primary-neutral-10 text-decoration-none">Consultacy</a></li>
+                <li class="mb-3"><a href="mailto:contact@ravelware.co?subject=My Job Application" class="font-sm color-primary-neutral-10 text-decoration-none">Career</a></li>
               </ul>
             </div>
             <div class="col-md-3">
               <h3 class="mb-3 title-sm color-primary-neutral-10 weight-700 d-flex align-items-center">Resources</h3>
               <ul class="list-unstyled">
-                <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">Blog</a></li>
-                <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">Case Study</a></li>
-                <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">F.A.Q</a></li>
+                <li class="mb-3"><a href="/resources" class="font-sm color-primary-neutral-10 text-decoration-none">Blog</a></li>
+                <li class="mb-3"><a href="/case-study" class="font-sm color-primary-neutral-10 text-decoration-none">Case Study</a></li>
+                <li class="mb-3"><a href="/contact" class="font-sm color-primary-neutral-10 text-decoration-none">F.A.Q</a></li>
                 <li class="mb-3"><a href="" class="font-sm color-primary-neutral-10 text-decoration-none">E-Book Catalogue</a></li>
               </ul>
             </div>
@@ -78,9 +78,9 @@
       <div class="row mt-5">
         <div class="col-md-4">
           <ul class="list-unstyled d-flex align-items-center">
-            <li class="me-4"><a href=""><img src="{{asset('img/icon/instagram.svg')}}"></a></li>
-            <li class="me-4"><a href=""><img src="{{asset('img/icon/facebook.svg')}}"></a></li>
-            <li class="me-4"><a href=""><img src="{{asset('img/icon/linkedin.svg')}}"></a></li>
+            <li class="me-4"><a target="_blank" href="https://www.instagram.com/ravelwaretechnology/"><img src="{{asset('img/icon/instagram.svg')}}"></a></li>
+            <li class="me-4"><a target="_blank" href="https://www.facebook.com/RavelwareTechnology"><img src="{{asset('img/icon/facebook.svg')}}"></a></li>
+            <li class="me-4"><a target="_blank" href="https://www.linkedin.com/company/pt-ravelware-technology-indonesia/mycompany/"><img src="{{asset('img/icon/linkedin.svg')}}"></a></li>
           </ul>
         </div>
         <div class="col-md-8">
@@ -89,7 +89,7 @@
             <li class="me-4"><span class="color-accent-1-base text-decoration-none">|</span></li>
             <li class="me-4"><a href="" class="color-accent-1-base text-decoration-none">Terms & Conditions</a></li>
             <li class="me-4"><span class="color-accent-1-base text-decoration-none">|</span></li>
-            <li class="me-4"><a href="" class="color-accent-1-base text-decoration-none">Ravelware Technology 2023</a></li>
+            <li class="me-4"><a href="" class="color-accent-1-base text-decoration-none">Ravelware Technology 2024</a></li>
           </ul>
         </div>
       </div>

@@ -7,6 +7,7 @@
 <br>
 <br>
 
+<center>
 <form method="POST" action="/ngeposting" >
   @csrf
 
@@ -28,23 +29,23 @@
     @enderror
   </div>
 
-  {{-- <div class="mb-6">
+  <div class="mb-6">
     <label for="img-path" class="inline-block text-lg mb-2">Image (link)</label><br>
     <input type="text" class="border border-gray-200 rounded p-2 w-full" name="img-path" value="{{old('img-path')}}" />
 
     @error('img-path')
       <p class="text-red-500 text-xs mt-1">{{$message}}</p>
     @enderror
-  </div> --}}
+  </div>
 
-  <div class="mb-6">
+  {{-- <div class="mb-6">
     <label for="img-path" class="inline-block text-lg mb-2">Image</label><br>
     <input type="file" class="border border-gray-200 rounded p-2 w-full" name="thumbnail" value="{{old('img-path')}}" />
 
     @error('img-path')
       <p class="text-red-500 text-xs mt-1">{{$message}}</p>
     @enderror
-  </div>
+  </div> --}}
 
   <div class="mb-6">
     <label for="tags" class="inline-block text-lg mb-2">Tags</label><br>
@@ -74,10 +75,11 @@
   </div>
 
   <div class="mb-6">
-    <button type="submit" class="text-white rounded py-2 px-4 hover:bg-black">
+    <button type="submit" class="rounded py-2 px-4 hover:bg-black">
       Add Resource
     </button>
   </div>
 </form>
+</center>
 
 @endsection
