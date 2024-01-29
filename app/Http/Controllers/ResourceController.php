@@ -24,11 +24,14 @@ class ResourceController extends Controller
         $formFields = $request->validate([
             'type' => 'required',
             'title' => 'required',
-            'img-path' => 'required',
             'tags' => 'required',
             'date' => 'required',
             'content' => 'required'
         ]);
+
+        if($request->hasFile('img-path')) {
+            $formFields['img-path'] = $request->file('img-path')->store('thumbnail', 'public');
+        }
 
         $formFields['identifier'] = strtolower(str_replace(' ', '-', preg_replace('/[^A-Za-z0-9\-]/', '', $formFields['title'])));
 
@@ -46,7 +49,7 @@ class ResourceController extends Controller
         // if($listing->logo && Storage::disk('public')->exists($listing->logo)) {
         //     Storage::disk('public')->delete($listing->logo);
         // }
-        
+
         $resource->delete();
         return redirect('/')->with('message', 'Listing deleted successfully');
     }

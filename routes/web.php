@@ -69,7 +69,15 @@ Route::post('/users', [UserController::class, 'store']);
 
 Route::get('/admin-post', [ResourceController::class, 'create'])->middleware('auth');
 Route::post('/ngeposting', [ResourceController::class, 'store'])->middleware('auth');
-Route::delete('/ngedelete/{resource}', [ResourceController::class, 'destroy'])->middleware('auth');
+// Route::delete('/ngedelete/{resource}', [ResourceController::class, 'destroy'])->middleware('auth');
+
+Route::get('cs-post', [CaseStudyController::class, 'create'])->middleware('auth');
+Route::post('cs-posting', [CaseStudyController::class, 'store'])->middleware('auth');
+Route::get('/case-study/{id}', function($id) {
+    return view('case-study', [
+        'case-study' => CaseStudy::find($id)
+    ]);
+});
 
 Route::get('/resources', [ResourceController::class, 'index']);
 

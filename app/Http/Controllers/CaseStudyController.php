@@ -12,4 +12,8 @@ class CaseStudyController extends Controller
             'case_studies' => CaseStudy::all()
         ]);
     }
+
+    public function create() {
+        return view('post-cs');
+    }
 }

@@ -7,6 +7,7 @@
 <br>
 <br>
 
+<center>
 <form method="POST" action="/users/authenticate">
   @csrf
   <div class="mb-6">
@@ -31,7 +32,7 @@
   </div>
 
   <div class="mb-6">
-    <button type="submit" class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
+    <button type="submit" class="bg-laravel rounded py-2 px-4 hover:bg-black">
       Sign In
     </button>
   </div>
@@ -43,4 +44,5 @@
     </p>
   </div>
 </form>
+</center>
 @endsection
