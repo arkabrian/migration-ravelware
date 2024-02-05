@@ -15,10 +15,21 @@ class ResourceController extends Controller
         ]);
     }
 
+    public function show(Resources $resource) {
+        return view('resource', [
+            'resource' => $resource
+        ]);
+    }
+
+    public function incrementVisitors(Request $request, Resources $resource) {
+        // Increment the visitors count for the page
+        $resource->increment('visitors');
+    }
+    
+
     public function create() {
         return view('post-resource');
     }
-
 
     public function store(Request $request) {
         $formFields = $request->validate([
@@ -30,11 +41,11 @@ class ResourceController extends Controller
             'img-path' => 'required'
         ]);
 
-        // if($request->hasFile('img-path')) {
-        //     $formFields['img-path'] = $request->file('img-path')->store('thumbnail', 'public');
-        // }
+        if($request->hasFile('img-path')) {
+            $formFields['img-path'] = $request->file('img-path')->store('thumbnail', 'public');
+        }
 
-        $formFields['identifier'] = strtolower(str_replace(' ', '-', preg_replace('/[^A-Za-z0-9\-]/', '', $formFields['title'])));
+        // $formFields['identifier'] = $request->strtolower(str_replace(' ', '-', preg_replace('/[^A-Za-z0-9\-]/', '', $formFields['title'])));
 
         Resources::create($formFields);
 
@@ -52,6 +63,6 @@ class ResourceController extends Controller
         // }
 
         $resource->delete();
-        return redirect('/')->with('message', 'Listing deleted successfully');
+        return redirect('/')->with('message', 'Resource deleted successfully');
     }
 }

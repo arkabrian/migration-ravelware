@@ -3,7 +3,9 @@
 @endphp
 
 @extends('layout')
+
 @section('content')
+@section('title', 'Case Studies | Ravelware Technologies Indonesia');
     <div class="content">
       <div class="case-study">
         <div class="banner">

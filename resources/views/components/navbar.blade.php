@@ -384,7 +384,7 @@
           </li>
         </ul>
         @endauth
-        <a href="/contact" class="btn-lg btn-black px-4 d-flex align-items-center position-relative">Let's Talk</a>
+        <a href="/contact-us" class="btn-lg btn-black px-4 d-flex align-items-center position-relative">Let's Talk</a>
       </div>
     </div>
   </div>

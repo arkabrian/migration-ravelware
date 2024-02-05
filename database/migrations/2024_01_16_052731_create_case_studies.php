@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->longText('img-path');
+            $table->longText('thumbnail');
             $table->longText('overview');
             $table->longText('issue');
             $table->longText('solution');

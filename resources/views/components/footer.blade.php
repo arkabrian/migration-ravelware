@@ -42,7 +42,7 @@
 
           <p class="mt-5 mb-0 title-sm color-primary-neutral-10">(+62)21 869 9297</p>
           <p class="mb-0 title-sm color-primary-neutral-10">(+62)822 6000 9297</p>
-          <div class="mt-5"><a href="" class="mt-5 title-sm color-primary-neutral-10">Contact@revelware.co</a></div>
+          <div class="mt-5"><a href="mailto:contact@ravelware.co" class="mt-5 title-sm color-primary-neutral-10">Contact@ravelware.co</a></div>
         </div>
         <div class="col-md-7">
           <div class="row">

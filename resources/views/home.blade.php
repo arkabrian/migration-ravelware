@@ -5,6 +5,7 @@
 @extends('layout')
 
 @section('content')
+@section('title', 'Ravelware Technology Indonesia');
     <div class="content">
       <!-- Main -->
       <div class="container-fluid p-0">
@@ -577,69 +578,33 @@
                 <div class="d-flex justify-content-end sm-justify-content-start sm-mt-3">
                   <div class="btn-wrap d-inline-flex btn-lg align-items-center btn-black-outline px-4">
                     <button class="prev-news border-0 bg-transparent"><img src="{{asset('img/icon/arrow-right.svg')}}" class="rotate-180"></button>
-                    <a href="" class="color-primary-neutral-100 weight-700 text-decoration-none">See All News</a>
+                    <a href="/resources" class="color-primary-neutral-100 weight-700 text-decoration-none">See All News</a>
                     <button class="next-news border-0 bg-transparent"><img src="{{asset('img/icon/arrow-right.svg')}}"></button>
                   </div>
                 </div>
               </div>
             </div>
             <div class="slick-list slick-news general-card mt-5">
-              <div class="">
-                <div class="general-card">
-                  <a href="" class="card border-0 text-decoration-none">
-                    <img src="{{asset('img/product/news-01.jpg')}}" class="card-img-top card-img-column" alt="...">
-                    <div class="card-body py-4 px-0">
-                      <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">September 26, 2023</span></p>
-                      <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Kunjungan Perwakilan Denso Corporation, Headquarters Japan and NTT Data Japan.</h2>
-                      <div class="">
-                        <span class="title-sm weight-700 color-primary-neutral-100 text-decoration-none d-flex align-items-center">Read More <img src="{{asset('img/icon/arrow-right-block.svg')}}" class="ms-2"></span>
-                      </div>
+              
+              @foreach($resources->reverse() as $resource)
+                @if($resource['type'] === 'news')
+                  <div class="">
+                    <div class="general-card">
+                      <a href="/resources/{{ $resource['id']}}" class="card border-0 text-decoration-none">
+                        <img src="{{ Str::contains($resource['img-path'], 'thumbnail/') ? asset('storage/' . $resource['img-path']) : $resource['img-path']}}" class="card-img-top card-img-column" alt="...">
+                        <div class="card-body py-4 px-0">
+                          <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">{{ $resource['date'] }}</span></p>
+                          <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">{{ $resource['title'] }}</h2>
+                          <div class="">
+                            <span class="title-sm weight-700 color-primary-neutral-100 text-decoration-none d-flex align-items-center">Read More <img src="{{asset('img/icon/arrow-right-block.svg')}}" class="ms-2"></span>
+                          </div>
+                        </div>
+                      </a>
                     </div>
-                  </a>
-                </div>
-              </div>
-              <div class="">
-                <div class="general-card">
-                  <a href="" class="card border-0 text-decoration-none">
-                    <img src="{{asset('img/product/news-02.jpg')}}" class="card-img-top card-img-column" alt="...">
-                    <div class="card-body py-4 px-0">
-                      <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">September 26, 2023</span></p>
-                      <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Penandatanganan Nota Kesepahaman Dengan Awina</h2>
-                      <div class="">
-                        <span class="title-sm weight-700 color-primary-neutral-100 text-decoration-none d-flex align-items-center">Read More <img src="{{asset('img/icon/arrow-right-block.svg')}}" class="ms-2"></span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="">
-                <div class="general-card">
-                  <a href="" class="card border-0 text-decoration-none">
-                    <img src="{{asset('img/product/news-03.jpg')}}" class="card-img-top card-img-column" alt="...">
-                    <div class="card-body py-4 px-0">
-                      <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">September 26, 2023</span></p>
-                      <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">Training Demo Alat Peraga Lean Monozukuri Dengan PIDI 4.0</h2>
-                      <div class="">
-                        <span class="title-sm weight-700 color-primary-neutral-100 text-decoration-none d-flex align-items-center">Read More <img src="{{asset('img/icon/arrow-right-block.svg')}}" class="ms-2"></span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="">
-                <div class="general-card">
-                  <a href="" class="card border-0 text-decoration-none">
-                    <img src="{{asset('img/product/news-04.jpg')}}" class="card-img-top card-img-column" alt="...">
-                    <div class="card-body py-4 px-0">
-                      <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">September 26, 2023</span></p>
-                      <h2 class="title title-md color-primary-neutral-100 my-3 h-auto d-block overflow-visible">PT RAVELWARE TECHNOLOGY INDONESIA: LEAN MONOZUKURI EVENT</h2>
-                      <div class="">
-                        <span class="title-sm weight-700 color-primary-neutral-100 text-decoration-none d-flex align-items-center">Read More <img src="{{asset('img/icon/arrow-right-block.svg')}}" class="ms-2"></span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
+                  </div>
+                @endif
+                
+              @endforeach
             </div>
           </div>
         </div>

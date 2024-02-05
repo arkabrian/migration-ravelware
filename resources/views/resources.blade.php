@@ -15,6 +15,7 @@
 
 @extends('layout')
 @section('content')
+@section('title', 'Resources | Ravelware Technology Indonesia');
     <div class="content">
       <div class="py-5">
         <div class="container">

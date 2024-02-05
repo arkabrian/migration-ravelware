@@ -4,6 +4,7 @@
 
 @extends('layout')
 @section('content')
+@section('title', 'Pick Your Consultation Date | Ravelware Technology Indonesia');
     <div class="content">
       <div class="consultation consultation-step">
         <div class="container">

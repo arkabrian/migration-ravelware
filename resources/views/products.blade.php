@@ -216,9 +216,11 @@
               <div class="ps-4">
                 <span class="btn-md btn-black px-3 d-inline-flex align-items-center weight-400">Product & Solution</span>
                 <h2 class="title title-2xl weight-700 mb-0 mt-4">PA'BOS - Productivity Assurance By Optimization & Standardization</h2>
-                <h3 class="title title-lg weight-400 mb-0 mt-3">Productivity vs Efficiency in Manufacture</h3>
+                {{-- <h3 class="title title-lg weight-400 mb-0 mt-3">Productivity vs Efficiency in Manufacture</h3> --}}
+                <h3 class="title title-md weight-400 mb-0 mt-5">PRODUCTIVITY vs EFFICIENCY IN MANUFACTURE</h3>
                 <p class="mb-0 color-primary-neutral-100 title-sm">Productivity and efficiency, though often used interchangeably, are distinct concepts in manufacturing. Productivity, the output-input ratio, quantifies the quantity of goods produced, involving resources like people, machinery, and materials. Efficiency, in contrast, gauges the proportion of flawless output with minimal waste, emphasizing quality. In a successful operation, a harmonious balance between high productivity and efficiency is crucial. Imagine a scenario with high productivity but low efficiency resulting in frequent rework, or high efficiency but low productivity leading to potential delays and low inventory. Striking this balance is essential for optimal manufacturing performance. Explore the best practices outlined here to navigate this relationship effectively and enhance your manufacturing processes.</p>
-                <h2 class="title title-lg weight-400 mb-0 mt-3">Unlock a 12-Month Money-Back Guarantee if You Don't Achieve a Minimum 10% Productivity Increase</h2>
+                {{-- <h2 class="title title-lg weight-400 mb-0 mt-3">Unlock a 12-Month Money-Back Guarantee if You Don't Achieve a Minimum 10% Productivity Increase</h2> --}}
+                <h2 class="title title-md weight-400 mb-0 mt-4">UNLOCK A 12-MONTH MONEY-BACK GUARANTEE IF A MINIMUM 10% PRODUCTIVITY INCREASE CAN'T BE ACHIEVED</h2>
                 <p class="mb-3 color-primary-neutral-100">Pa'Bos will stand as the most effective entry point for your manufacture to simultaneously increase productivity and maximize efficiency by aligning with the 9 principles of productivity optimization</p> 
                 <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Ensure Seamless Production Kickoff</span></span>
                 <span class="ps-4 d-block mb-1"><span class="d-list-item weight-700">- Precision Timing for Shop Floor Success</span></span>
@@ -315,12 +317,6 @@
                   <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-01" role="tabpanel" aria-labelledby="v-pills-01-tab" tabindex="0">
                       <div class="d-flex align-items-center justify-content-between mb-5">
-                        <form>
-                          <div class="form-search position-relative">
-                            <input type="text" class="form-control" placeholder="Search Product" name="">
-                            <button type="submit"><img src="{{asset('img/icon/search-normal.svg')}}"></button>
-                          </div>
-                        </form>
                         <p class="mb-0 weight-700">4 Product for RFID Technology</p>
                       </div>
                       <ul class="list-unstyled solution-list thumbnail row">

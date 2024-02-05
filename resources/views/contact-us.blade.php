@@ -1,5 +1,10 @@
+@php
+    session(['activeMenu' => '']);
+@endphp
+
 @extends('layout')
 @section('content')
+@section('title', 'Contact Us | Ravelware Technology Indonesia')
     <div class="content">
       <div class="contact-us py-5">
         <div class="container">
@@ -35,33 +40,34 @@
                   <li class="d-flex align-items-center">
                     <span class="me-3"><img src="{{asset('img/icon/sms.svg')}}"></span>
                     <a href="" class="text-decoration-none color-primary-neutral-100">
-                      Contact@revelware.co
+                      Contact@ravelware.co
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
             <div class="col-md-6 ps-5">
-              <form class="row" id='contactForm'>
+              <form class="row" id='contactForm' action="{{ route('send.mail.post') }}" method="post">
+                @csrf
                 <div class="mb-5 col-md-6">
                   <label for="" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="" placeholder="Enter your name">
+                  <input type="text" class="form-control" name="name" id="name" aria-describedby="" placeholder="Enter your name">
                 </div>
                 <div class="mb-5 col-md-6">
                   <label for="" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="" placeholder="Enter your email">
+                  <input type="email" class="form-control" name="email" id="email" aria-describedby="" placeholder="Enter your email">
                 </div>
                 <div class="mb-5 col-md-6">
                   <label for="" class="form-label">Job Title</label>
-                  <input type="text" class="form-control" id="job" aria-describedby="" placeholder="Enter your job title">
+                  <input type="text" class="form-control" name="job" id="job" aria-describedby="" placeholder="Enter your job title">
                 </div>
                 <div class="mb-5 col-md-6">
                   <label for="" class="form-label">Company</label>
-                  <input type="text" class="form-control" id="company" aria-describedby="" placeholder="Enter your company">
+                  <input type="text" class="form-control" name="company" id="company" aria-describedby="" placeholder="Enter your company">
                 </div>
                 <div class="mb-5 col-md-6">
                   <label for="" class="form-label">Company Size (Employees)</label>
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" name="size" id="size" aria-label="Default select example">
                     <option selected>Enter company size</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -70,28 +76,28 @@
                 </div>
                 <div class="mb-5 col-md-6">
                   <label for="" class="form-label">Industry Fields</label>
-                  <input type="text" class="form-control" id="industry" aria-describedby="" placeholder="Enter your industry fields">
+                  <input type="text" class="form-control" name="industry" id="industry" aria-describedby="" placeholder="Enter your industry fields">
                 </div>
                 <div class="mb-5 col-md-12">
                   <label for="" class="form-label">Company Location</label>
-                  <input type="text" class="form-control" id="location" aria-describedby="" placeholder="Enter your company location">
+                  <input type="text" class="form-control" name="location" id="location" aria-describedby="" placeholder="Enter your company location">
                 </div>
                 <div class="mb-5 col-md-12">
                   <label for="" class="form-label">Test Subject</label>
-                  <input type="text" class="form-control" id="subject" aria-describedby="" placeholder="Enter your company location">
+                  <input type="text" class="form-control" name="subject" id="subject" aria-describedby="" placeholder="Enter your company location">
                 </div>
                 <div class="mb-5 col-md-12">
                   <label for="" class="form-label">Any Notes? (Optional)</label>
-                  <input type="text" class="form-control" id="body" aria-describedby="" placeholder="Enter your company location">
+                  <input type="text" class="form-control" name="body" id="body" aria-describedby="" placeholder="Enter your company location">
                 </div>
                 <div class="mb-5 col-md-12">
                   <div class="form-checkbox">
-                    <input type="checkbox" id="update">
+                    <input type="checkbox" name="update" id="update">
                     <label for="update"><span>Would you like to get update on Ravelware tech news?</span></label>
                   </div>
                 </div>
                 <div>
-                  <button type="submit" onclick="sendEmail()" class="btn-lg btn-black px-5 d-flex align-items-center position-relative border-0">Send Message</button>
+                  <button type="submit" name="submit" id="submit" class="btn-lg btn-black px-5 d-flex align-items-center position-relative border-0">Send Message</button>
                 </div>
               </form>
             </div>
@@ -113,42 +119,6 @@
 
   <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript">
-    function sendEmail(){
-      var name = $("#name");
-      var email = $("#email");
-      var subject = $("#subject");
-      var body = $("#body");
-
-      if(isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)){
-        $.ajax({
-          url: 'sendEmail.php',
-          method: 'POST',
-          dataType: 'json',
-          data:{
-            name: name.val(),
-            email: email.val(),
-            subject: subject.val(),
-            body: body.val()
-          }, success: function(response){
-            $('#contactForm')[0].reset();
-          }
-        })
-      }
-    }
-
-    function isNotEmpty(caller){
-      if(caller.val()=""){
-        caller.css('border', '1px solid red');
-        return false;
-      }
-      else{
-        caller.css('border', '');
-        return true;
-      }
-    }
-  </script>
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

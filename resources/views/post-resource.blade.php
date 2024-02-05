@@ -8,7 +8,7 @@
 <br>
 
 <center>
-<form method="POST" action="/ngeposting" >
+<form method="POST" action="/ngeposting" enctype="multipart/form-data">
   @csrf
 
   <div class="mb-6">
@@ -29,23 +29,23 @@
     @enderror
   </div>
 
-  <div class="mb-6">
+  {{-- <div class="mb-6">
     <label for="img-path" class="inline-block text-lg mb-2">Image (link)</label><br>
     <input type="text" class="border border-gray-200 rounded p-2 w-full" name="img-path" value="{{old('img-path')}}" />
 
     @error('img-path')
       <p class="text-red-500 text-xs mt-1">{{$message}}</p>
     @enderror
-  </div>
+  </div> --}}
 
-  {{-- <div class="mb-6">
+  <div class="mb-6">
     <label for="img-path" class="inline-block text-lg mb-2">Image</label><br>
-    <input type="file" class="border border-gray-200 rounded p-2 w-full" name="thumbnail" value="{{old('img-path')}}" />
+    <input type="file" class="border border-gray-200 rounded p-2 w-full" name="img-path" value="{{old('img-path')}}" />
 
     @error('img-path')
       <p class="text-red-500 text-xs mt-1">{{$message}}</p>
     @enderror
-  </div> --}}
+  </div>
 
   <div class="mb-6">
     <label for="tags" class="inline-block text-lg mb-2">Tags</label><br>

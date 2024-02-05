@@ -1,11 +1,13 @@
 <?php
 
-use App\Http\Controllers\CaseStudyController;
-use Illuminate\Support\Facades\Route;
-use App\Models\Resources;
-use App\Http\Controllers\ResourceController;
-use App\Http\Controllers\UserController;
 use App\Models\CaseStudy;
+use App\Models\Resources;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ResourceController;
+use App\Http\Controllers\CaseStudyController;
+use App\Http\Controllers\PHPMailerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,16 +20,10 @@ use App\Models\CaseStudy;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
 
 Route::get('/about', function () {
     return view('about-us');
-});
-
-Route::get('/contact', function () {
-    return view('contact-us');
 });
 
 // Route::get('/resources', function () {
@@ -62,7 +58,7 @@ Route::post('/users', [UserController::class, 'store']);
 
 Route::get('/admin-post', [ResourceController::class, 'create'])->middleware('auth');
 Route::post('/ngeposting', [ResourceController::class, 'store'])->middleware('auth');
-// Route::delete('/ngedelete/{resource}', [ResourceController::class, 'destroy'])->middleware('auth');
+Route::delete('/resources/{id}', [ResourceController::class, 'destroy'])->middleware('auth');
 
 Route::get('/cs-post', [CaseStudyController::class, 'create'])->middleware('auth');
 Route::post('/cs-posting', [CaseStudyController::class, 'store'])->middleware('auth');
@@ -74,9 +70,20 @@ Route::get('/case-study/{id}', function($id) {
 });
 
 Route::get('/resources', [ResourceController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+// Route::get('/resources/{id}', function($id) {
+//     $resource = Resources::find($id);
+    // $update = [
+    //     'visitors' => $resource['visitors'] + 1
+    // ];
+//     Resources::where('id', $resource['id'])->update($update);
+//     return view('resource', [
+//         'resource' => $resource
+//     ]);
+// });
 
-Route::get('/resources/{id}', function($id) {
-    return view('resource', [
-        'resource' => Resources::find($id)
-    ]);
-});
+Route::get('/resources/{id}', [ResourceController::class, 'show']);
+
+
+Route::get('/contact-us', [PHPMailerController::class, 'index'])->name('send.mail');
+Route::post('/contact-us', [PHPMailerController::class, 'store'])->name('send.mail.post');

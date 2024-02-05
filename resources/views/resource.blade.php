@@ -4,6 +4,9 @@
 
 @extends('layout')
 @section('content')
+@section('title')
+    {{ $resource['title'] }} | Ravelware Technology Indonesia
+@endsection
 <div class="content">
   <div class="detail-resources">
     <div class="top-resources tags">
@@ -12,19 +15,26 @@
           <li><input type="checkbox" id="" readonly><label for="">Article</label></li>
         </ul>
         <h2 class="title title-lg color-primary-neutral-10 mb-4">{{ $resource['title'] }}</h2>
+        @auth
+          <form action="/resources/{{$resource['id']}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button class="text-red-500">Delete</button>
+          </form>
+        @endauth
         <p class="mb-4 text-wrap border-0 color-primary-neutral-10 mb-4">Posted on <span class="color-accent-1-base ms-2">{{ $resource['date'] }}</span></p>
         <ul class="list-unstyled d-flex align-items-center mb-5 w-100 justify-content-center tags-white">
           @foreach($tags as $tag)
           <li><input type="checkbox" id="" readonly><label for="">{{$tag}}</label></li>
           @endforeach
         </ul>
-        <img src="{{ $resource['img-path'] }}" class="w-100">
+        <img src="{{ Str::contains($resource['img-path'], 'thumbnail/') ? asset('storage/' . $resource['img-path']) : $resource['img-path']}}" class="w-100">
       </div>
     </div>
     <div class="middle-resources">
       <div class="container">
         <div class="px-100">
-          {!!$resource['content'] !!}
+          {!! $resource['content'] !!}
           <p class="mt-5">Copyrighted By PT Ravelware Technology Indonesia</p>
         </div>
         <div class="mt-5 p-5 bg-primary-neutral-100 black-info">
@@ -85,7 +95,7 @@
           <p><i>* required</i></p>
         </form>
         <hr class="b-bottom-primary-100 border-bottom-0 opacity-100">
-        <div class="row justify-content-between my-5">
+        {{-- <div class="row justify-content-between my-5">
           <div class="col-md-4">
             <a href="" class="card text-decoration-none b-bottom-primary-100">
               <div class="mb-3">
@@ -108,7 +118,7 @@
               </div>
             </a>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
     <div class="bottom-resources container mt-5">
