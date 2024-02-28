@@ -58,7 +58,7 @@ Route::post('/users', [UserController::class, 'store']);
 
 Route::get('/admin-post', [ResourceController::class, 'create'])->middleware('auth');
 Route::post('/ngeposting', [ResourceController::class, 'store'])->middleware('auth');
-// Route::delete('/resources/{id}', [ResourceController::class, 'destroy'])->middleware('auth');
+Route::delete('/resources/{id}', [ResourceController::class, 'destroy'])->middleware('auth');
 
 Route::post('/cs-posting', [CaseStudyController::class, 'store'])->middleware('auth');
 Route::get('/cs-post', [CaseStudyController::class, 'create'])->middleware('auth');
@@ -87,3 +87,4 @@ Route::get('/contact-us', [PHPMailerController::class, 'index'])->name('send.mai
 Route::post('send-mail-contact', [PHPMailerController::class, 'contact'])->name('send.mail.contact');
 Route::post('send-mail-resource', [PHPMailerController::class, 'resource'])->name('send.mail.resource');
 Route::post('send-mail-consultation', [PHPMailerController::class, 'consultation'])->name('send.mail.consultation');
+Route::post('send-mail-case', [PHPMailerController::class, 'case'])->name('send.mail.case');

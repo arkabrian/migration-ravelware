@@ -4,6 +4,7 @@
 
 @extends('layout')
 @section('content')
+@section('title', 'About Us | Ravelware Technology Indonesia');
     <div class="content">
       <div class="about-us pt-5">
         <div class="container">

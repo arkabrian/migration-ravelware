@@ -423,16 +423,15 @@
           </div>
           <div class="slick-list slick-resource general-card mt-4">
             <div>
-              <a href="" class="card border-0 text-decoration-none">
-                <img src="{{asset('img/product/case-01.jpg')}}" class="card-img-top" alt="...">
+              <a href="/case-study" class="card border-0 text-decoration-none">
+                <img src="{{asset('storage/thumbnail/smartlighting.jpeg')}}" class="card-img-top" alt="...">
                 <div class="card-body py-5 px-0">
                   <div class="tags">
                     <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
                       <li><input type="checkbox" id="" checked="" readonly=""><label for="">Case Study</label></li>
                     </ul>
                   </div>
-                  <h2 class="title title-lg color-primary-neutral-100 my-3">Lean Warehousing System</h2>
-                  <p class="title title-md mb-0 mb-4 pb-4">Warehouse 4.0</p>
+                  <h2 class="title title-lg color-primary-neutral-100 my-3">Smart Lighting System</h2>
                   <div class="d-flex justify-content-between">
                     <span class="title-sm weight-700">Learn More</span>
                     <img src="{{asset('img/icon/arrow-right-block.svg')}}">
@@ -441,16 +440,15 @@
               </a>
             </div>
             <div>
-              <a href="" class="card border-0 text-decoration-none">
-                <img src="{{asset('img/product/case-02.jpg')}}" class="card-img-top" alt="...">
+              <a href="/case-study" class="card border-0 text-decoration-none">
+                <img src="{{asset('storage/thumbnail/fleetparking.jpeg')}}" class="card-img-top" alt="...">
                 <div class="card-body py-5 px-0">
                   <div class="tags">
                     <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
                       <li><input type="checkbox" id="" checked="" readonly=""><label for="">Case Study</label></li>
                     </ul>
                   </div>
-                  <h2 class="title title-lg color-primary-neutral-100 my-3">Lean Manufacture</h2>
-                  <p class="title title-md mb-0 mb-4 pb-4">Toyota Production System</p>
+                  <h2 class="title title-lg color-primary-neutral-100 my-3">Fleet Parking Management</h2>
                   <div class="d-flex justify-content-between">
                     <span class="title-sm weight-700">Learn More</span>
                     <img src="{{asset('img/icon/arrow-right-block.svg')}}">
@@ -459,16 +457,15 @@
               </a>
             </div>
             <div>
-              <a href="" class="card border-0 text-decoration-none">
-                <img src="{{asset('img/product/case-03.jpg')}}" class="card-img-top" alt="...">
+              <a href="/case-study" class="card border-0 text-decoration-none">
+                <img src="{{asset('storage/thumbnail/smartlogistic.png')}}" class="card-img-top" alt="...">
                 <div class="card-body py-5 px-0">
                   <div class="tags">
                     <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
                       <li><input type="checkbox" id="" checked="" readonly=""><label for="">Case Study</label></li>
                     </ul>
                   </div>
-                  <h2 class="title title-lg color-primary-neutral-100 my-3">Smart Factory</h2>
-                  <p class="title title-md mb-0 mb-4 pb-4">Smart Building</p>
+                  <h2 class="title title-lg color-primary-neutral-100 my-3">Smart Logistic System</h2>
                   <div class="d-flex justify-content-between">
                     <span class="title-sm weight-700">Learn More</span>
                     <img src="{{asset('img/icon/arrow-right-block.svg')}}">
@@ -477,34 +474,15 @@
               </a>
             </div>
             <div>
-              <a href="" class="card border-0 text-decoration-none">
-                <img src="{{asset('img/product/case-04.jpg')}}" class="card-img-top" alt="...">
+              <a href="/case-study" class="card border-0 text-decoration-none">
+                <img src="{{asset('storage/thumbnail/smartfactorysafety.jpeg')}}" class="card-img-top" alt="...">
                 <div class="card-body py-5 px-0">
                   <div class="tags">
                     <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
                       <li><input type="checkbox" id="" checked="" readonly=""><label for="">Case Study</label></li>
                     </ul>
                   </div>
-                  <h2 class="title title-lg color-primary-neutral-100 my-3">Cyber Security</h2>
-                  <p class="title title-md mb-0 mb-4 pb-4">&nbsp;</p>
-                  <div class="d-flex justify-content-between">
-                    <span class="title-sm weight-700">Learn More</span>
-                    <img src="{{asset('img/icon/arrow-right-block.svg')}}">
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div>
-              <a href="" class="card border-0 text-decoration-none">
-                <img src="{{asset('img/product/case-05.jpg')}}" class="card-img-top" alt="...">
-                <div class="card-body py-5 px-0">
-                  <div class="tags">
-                    <ul class="list-unstyled d-flex align-items-center mb-0 w-100">
-                      <li><input type="checkbox" id="" checked="" readonly=""><label for="">Case Study</label></li>
-                    </ul>
-                  </div>
-                  <h2 class="title title-lg color-primary-neutral-100 my-3">Mechanical</h2>
-                  <p class="title title-md mb-0 mb-4 pb-4">Contractor & Manufacture Services</p>
+                  <h2 class="title title-lg color-primary-neutral-100 my-3">Smart Factory Safety System</h2>
                   <div class="d-flex justify-content-between">
                     <span class="title-sm weight-700">Learn More</span>
                     <img src="{{asset('img/icon/arrow-right-block.svg')}}">

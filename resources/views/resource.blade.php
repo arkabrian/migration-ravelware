@@ -18,8 +18,8 @@
         @auth
           <form action="/resources/{{$resource['id']}}" method="POST">
             @csrf
-            @method('DELETE')
-            <button class="text-red-500">Delete</button>
+              @method('DELETE')
+              <button class="text-red-500">Delete</button>
           </form>
         @endauth
         <p class="mb-4 text-wrap border-0 color-primary-neutral-10 mb-4">Posted on <span class="color-accent-1-base ms-2">{{ $resource['date'] }}</span></p>
@@ -85,8 +85,8 @@
             <label for="" class="form-label">Tell Us Your Needs*</label>
             <br>
             <select class="form-select" id="resourcetype" name="resourcetype" aria-label="Default select example">
-              <option value="monitoring">Paper</option>
-              <option value="analytics">Case Study</option>
+              <option value="Paper">Paper</option>
+              <option value="Case Study">Case Study</option>
             </select>
           </div>
           <div class="mb-5 col-md-6">

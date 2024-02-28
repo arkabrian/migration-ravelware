@@ -25,7 +25,7 @@ class PHPMailerController extends Controller
             $mail->Port = env('MAIL_PORT');
 
             $mail->setFrom(env('MAIL_FROM_ADDRESS'));
-            $mail->addAddress('arka.brian13@gmail.com');
+            $mail->addAddress(env('MAIL_USERNAME'));
 
             $mail->Subject = "PERMINTAAN CONTACT US";
             $mail->Body =   "Name                    : " . $request->name . "\n" .
@@ -103,7 +103,7 @@ class PHPMailerController extends Controller
             $mail->Port = env('MAIL_PORT');
 
             $mail->setFrom(env('MAIL_FROM_ADDRESS'));
-            $mail->addAddress('arka.brian13@gmail.com');
+            $mail->addAddress(env('MAIL_USERNAME'));
 
             $mail->Subject = "PERMINTAAN RESOURCE";
             $mail->Body =   "Resource      : " . $request->article_title . " (" . $request->article_id . ")". "\n" .
@@ -112,6 +112,43 @@ class PHPMailerController extends Controller
                             "Company Name  : " . $request->companyname . "\n" .
                             "Resource Type : " . $request->resourcetype . "\n" .
                             "Remarks       : " . $request->remarks . "\n";
+
+            if(!$mail->send()){
+                echo "<script type='text/javascript'>alert('Email GAGAL terkirim');</script>";
+                return back()->with('error', 'Email not sent')->withErrors($mail->ErrorInfo);
+            }
+            else{
+                echo "<script type='text/javascript'>alert('Email BERHASIL terkirim');</script>";
+                return back()->with('success', 'Email has been sent');
+            }
+        }
+        catch(Exception $e){
+            echo "<script type='text/javascript'>alert('etot');</script>";
+            return back()->with('error', 'Message could not be sent');
+        }
+    }
+
+    public function case(Request $request){
+        $mail = new PHPMailer(true);
+        try{
+            $mail->SMTPDebug = 0;
+            $mail->isSMTP();
+            $mail->Host = env('MAIL_HOST');
+            $mail->SMTPAuth = true;
+            $mail->Username = env('MAIL_USERNAME');
+            $mail->Password = env('MAIL_PASSWORD');
+            $mail->SMTPSecure = env('MAIL_ENCRYPTION');
+            $mail->Port = env('MAIL_PORT');
+
+            $mail->setFrom(env('MAIL_FROM_ADDRESS'));
+            $mail->addAddress(env('MAIL_USERNAME'));
+
+            $mail->Subject = "PERMINTAAN CASE STUDY";
+            $mail->Body =   "Full Name       : " . $request->fullname . "\n" .
+                            "Company Email   : " . $request->companymail . "\n" .
+                            "Company Name    : " . $request->companyname . "\n" .
+                            "Case Study Type : " . $request->case_study_type . "\n" .
+                            "Remarks         : " . $request->remarks . "\n";
 
             if(!$mail->send()){
                 echo "<script type='text/javascript'>alert('Email GAGAL terkirim');</script>";
