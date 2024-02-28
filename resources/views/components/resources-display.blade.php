@@ -18,14 +18,20 @@
         <h2 class="title title-lg color-primary-neutral-100 my-3 h-auto d-block overflow-visible">{{ $resource['title'] }}</h2>
         <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">{{ $resource['date'] }}</span></p>
         <p class="mb-0 mb-4 text-wrap border-0 info">
-          @if (preg_match("/<p class='mb-4'>(.*?)<\/p>/s", $resource['content'], $matches))
-            @php
-                $content = strip_tags($matches[0]); // Extract content within <p> tags and remove HTML tags
-                $trimmed_content = mb_substr($content, 0, 285); // Trim content to 285 characters
-                $display_content = strlen($trimmed_content) < 285 ? $trimmed_content : rtrim($trimmed_content) . '...'; // Add ellipsis if content is longer
-            @endphp
-            {!! $display_content !!}
-        @endif
+          @if ($resource['content'])
+              @php
+                  // Extract text content from HTML and remove any HTML tags
+                  $contentWithoutTags = strip_tags($resource['content']);
+
+                  // Truncate the content to 285 characters
+                  $truncatedContent = mb_substr($contentWithoutTags, 0, 285);
+
+                  // Add ellipsis if the content was truncated
+                  $displayContent = strlen($contentWithoutTags) > 285 ? $truncatedContent . '...' : $truncatedContent;
+              @endphp
+
+              {!! $displayContent !!}
+          @endif
         </p>
         <div class="d-flex justify-content-between">
           <span class="title-sm weight-700">Read More <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>

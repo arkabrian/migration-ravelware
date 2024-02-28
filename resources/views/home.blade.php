@@ -532,13 +532,31 @@
           </div>
           <div class="row mt-5">
             <div class="col-md-8">
+              @php
+                  $highestResource = $resources->sortByDesc('visitors')->first();
+              @endphp
               <div class="general-card">
-                <a href="" class="card border-0 text-decoration-none">
-                  <img src="{{asset('img/product/case-06.jpg')}}" class="card-img-top card-img-blog" alt="...">
+                <a href="/resources/{{ $highestResource['id']}}" class="card border-0 text-decoration-none">
+                  <img src="{{ Str::contains($highestResource['img-path'], 'thumbnail/') ? asset('storage/' . $highestResource['img-path']) : $highestResource['img-path']}}" class="card-img-top card-img-blog" alt="...">
                   <div class="card-body py-5 px-0">
-                    <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">September 27, 2023</span></p>
-                    <h2 class="title title-lg color-primary-neutral-100 my-3">RAVELWARE : WAREHOUSE MANAGEMENT SYSTEM</h2>
-                    <p class="mb-0 mb-4 text-wrap border-0">Warehouse Management System (WMS) adalah perangkat lunak atau sistem yang digunakan untuk mengelola dan mengoptimalkan operasi penyimpanan dan distribusi dalam gudang atau pusat distribusi. Tujuan utama dari WMS adalah meningkatkan efisiensi, akurasi, dan produktivitas dalam mengelola inventaris dan pengiriman barang.</p>
+                    <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">{{ $highestResource['date'] }}</span></p>
+                    <h2 class="title title-lg color-primary-neutral-100 my-3">{{ $highestResource['title']}}</h2>
+                    <p class="mb-0 mb-4 text-wrap border-0">
+                      @if ($highestResource && $highestResource['content'])
+                          @php
+                              // Extract text content from HTML and remove any HTML tags
+                              $contentWithoutTags = strip_tags($highestResource['content']);
+
+                              // Truncate the content to 285 characters
+                              $truncatedContent = mb_substr($contentWithoutTags, 0, 285);
+
+                              // Add ellipsis if the content was truncated
+                              $displayContent = strlen($contentWithoutTags) > 285 ? $truncatedContent . '...' : $truncatedContent;
+                          @endphp
+
+                          {!! $displayContent !!}
+                      @endif                    
+                    </p>
                     <div class="d-flex justify-content-between">
                       <span class="title-sm weight-700">Read More <img src="{{asset('img/icon/arrow-right-block.svg')}}"></span>
                     </div>
@@ -548,24 +566,17 @@
             </div>
             <div class="col-md-4 ps-5">
               <h2 class="mb-4 title title-lg color-primary-neutral-100 weight-700 d-flex align-items-center">Recent Post</h2>
+              @foreach($resources->reverse()->take(2) as $resource)
               <div class="general-card">
-                <a href="" class="card border-0 text-decoration-none">
-                  <img src="{{asset('img/product/case-07.jpg')}}" class="card-img-top card-img-column" alt="...">
+                <a href="/resources/{{ $resource['id']}}" class="card border-0 text-decoration-none">
+                  <img src="{{ Str::contains($resource['img-path'], 'thumbnail/') ? asset('storage/' . $resource['img-path']) : $resource['img-path']}}" class="card-img-top card-img-column" alt="...">
                   <div class="card-body py-4 px-0">
-                    <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">September 26, 2023</span></p>
-                    <h2 class="title title-md color-primary-neutral-100 my-3 h-auto">KAIZEN : 3 Langkah Penting Penerapan TQM</h2>
+                    <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">{{ $resource['date'] }}</span></p>
+                    <h2 class="title title-md color-primary-neutral-100 my-3 h-auto">{{ $resource['title'] }}</h2>
                   </div>
                 </a>
               </div>
-              <div class="general-card">
-                <a href="" class="card border-0 text-decoration-none">
-                  <img src="{{asset('img/product/case-08.jpg')}}" class="card-img-top card-img-column" alt="...">
-                  <div class="card-body py-4 px-0">
-                    <p class="mb-4 text-wrap border-0">Posted on <span class="color-accent-1-base ms-2">September 26, 2023</span></p>
-                    <h2 class="title title-md color-primary-neutral-100 my-3 h-auto">3 PERAN BESAR AI DAN IOT DALAM MANUFAKTUR</h2>
-                  </div>
-                </a>
-              </div>
+              @endforeach
             </div>
           </div>
 

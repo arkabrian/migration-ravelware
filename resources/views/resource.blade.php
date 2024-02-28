@@ -37,7 +37,7 @@
           {!! $resource['content'] !!}
           <p class="mt-5">Copyrighted By PT Ravelware Technology Indonesia</p>
         </div>
-        <div class="mt-5 p-5 bg-primary-neutral-100 black-info">
+        {{-- <div class="mt-5 p-5 bg-primary-neutral-100 black-info">
           <div class="row">
             <div class="col-md-6">
               <div class="d-flex align-items-center">
@@ -52,48 +52,54 @@
               <div class="row w-100 justify-content-end">
                 <div class="col-md-4">
                   <h3 class="font-sm color-primary-neutral-10 mb-3">Share on</h3>
-                  <ul class="list-unstyled d-flex align-items-center mb-0">
-                    <li class="me-4"><a href=""><img src="{{asset('img/icon/instagram.svg')}}"></a></li>
-                    <li class="me-4"><a href=""><img src="{{asset('img/icon/facebook.svg')}}"></a></li>
-                    <li class="me-4"><a href=""><img src="{{asset('img/icon/linkedin.svg')}}"></a></li>
-                  </ul>
+                  <div class="list-unstyled d-flex align-items-center mb-0">
+                    <div class="me-4"><a href="https://www.instagram.com/ravelwaretechnology"><img src="{{asset('img/icon/instagram.svg')}}"></a></div>
+                    <div class="me-4"><a href="https://www.facebook.com/RavelwareTechnology"><img src="{{asset('img/icon/facebook.svg')}}"></a></div>
+                    <div class="me-4"><a href="https://www.linkedin.com/company/pt-ravelware-technology-indonesia/mycompany/"><img src="{{asset('img/icon/linkedin.svg')}}"></a></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <form class="my-5">
-          <h2 class="mb-4 title title-md color-primary-neutral-100 weight-700 d-flex align-items-center">Request for Full Paper Version or Relevant Case Study</h2>
+        </div> --}}
+        <center>
+        <form class="my-5" id='contactForm' action={{ route('send.mail.resource') }} method="post">
+          @csrf
+          <input type="hidden" name="article_title" value="{{ $resource['title'] }}">
+          <input type="hidden" name="article_id" value="{{ $resource['id'] }}">
+
+          <h2 class="mb-4 title title-md color-primary-neutral-100 weight-700 align-items-center">Request for Full Paper Version or Relevant Case Study</h2>
           <div class="mb-4 col-md-6">
             <label for="" class="form-label">Full Name*</label>
-            <input type="text" class="form-control" id="" aria-describedby="" placeholder="Your Full Name">
+            <input type="text" class="form-control" name="fullname" id="fullname" aria-describedby="" placeholder="Your Full Name">
           </div>
           <div class="mb-4 col-md-6">
             <label for="" class="form-label">Company Email*</label>
-            <input type="email" class="form-control" id="" aria-describedby="" placeholder="Your Email">
+            <input type="email" class="form-control" name="companymail" id="companymail" aria-describedby="" placeholder="Your Email">
           </div>
           <div class="mb-5 col-md-6">
             <label for="" class="form-label">Company Name*</label>
-            <input type="text" class="form-control" id="" aria-describedby="" placeholder="Your company Name">
+            <input type="text" class="form-control" name="companyname" id="" aria-describedby="" placeholder="Your company Name">
           </div>
           <div class="mb-5 col-md-6">
             <label for="" class="form-label">Tell Us Your Needs*</label>
             <br>
-            <select id="cars" name="carlist" form="carform">
+            <select class="form-select" id="resourcetype" name="resourcetype" aria-label="Default select example">
               <option value="monitoring">Paper</option>
               <option value="analytics">Case Study</option>
             </select>
           </div>
           <div class="mb-5 col-md-6">
             <label for="" class="form-label">Other Remarks</label>
-            <input type="text" class="form-control" id="" aria-describedby="" placeholder="Remarks">
+            <input type="text" class="form-control" name="remarks" id="remarks" aria-describedby="" placeholder="Remarks">
           </div>
           <p><i>We will send your requests to your company email</i></p>
-          <div class="d-flex justify-content-between align-items-center">
-            <button type="submit" class="btn-lg btn-black px-5 d-flex align-items-center position-relative border-0">Send</button>
+          <div class="justify-content-between align-items-center">
+            <button type="submit" name="submit" id="submit" class="btn-lg btn-black px-5 d-flex align-items-center position-relative border-0">Send</button>
           </div>
           <p><i>* required</i></p>
         </form>
+        </center>
         <hr class="b-bottom-primary-100 border-bottom-0 opacity-100">
         {{-- <div class="row justify-content-between my-5">
           <div class="col-md-4">
@@ -191,4 +197,5 @@
     </div>
   </div>
 </div>
+
 @endsection

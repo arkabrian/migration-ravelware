@@ -58,32 +58,32 @@ Route::post('/users', [UserController::class, 'store']);
 
 Route::get('/admin-post', [ResourceController::class, 'create'])->middleware('auth');
 Route::post('/ngeposting', [ResourceController::class, 'store'])->middleware('auth');
-Route::delete('/resources/{id}', [ResourceController::class, 'destroy'])->middleware('auth');
+// Route::delete('/resources/{id}', [ResourceController::class, 'destroy'])->middleware('auth');
 
-Route::get('/cs-post', [CaseStudyController::class, 'create'])->middleware('auth');
 Route::post('/cs-posting', [CaseStudyController::class, 'store'])->middleware('auth');
+Route::get('/cs-post', [CaseStudyController::class, 'create'])->middleware('auth');
+
 Route::get('/case-study', [CaseStudyController::class, 'index']);
 Route::get('/case-study/{id}', function($id) {
+    $caseStudy = CaseStudy::find($id);
     return view('case-study', [
-        'case-study' => CaseStudy::find($id)
+        'case-study' => $caseStudy
     ]);
 });
 
 Route::get('/resources', [ResourceController::class, 'index']);
-Route::get('/', [HomeController::class, 'index'])->name('home');
-// Route::get('/resources/{id}', function($id) {
-//     $resource = Resources::find($id);
-    // $update = [
-    //     'visitors' => $resource['visitors'] + 1
-    // ];
-//     Resources::where('id', $resource['id'])->update($update);
-//     return view('resource', [
-//         'resource' => $resource
-//     ]);
-// });
+Route::get('/resources/{id}', function($id) {
+    $resource = Resources::find($id);
+    return view('resource', [
+        'resource' => $resource
+    ]);
+});
 
-Route::get('/resources/{id}', [ResourceController::class, 'show']);
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 Route::get('/contact-us', [PHPMailerController::class, 'index'])->name('send.mail');
-Route::post('/contact-us', [PHPMailerController::class, 'store'])->name('send.mail.post');
+Route::post('send-mail-contact', [PHPMailerController::class, 'contact'])->name('send.mail.contact');
+Route::post('send-mail-resource', [PHPMailerController::class, 'resource'])->name('send.mail.resource');
+Route::post('send-mail-consultation', [PHPMailerController::class, 'consultation'])->name('send.mail.consultation');

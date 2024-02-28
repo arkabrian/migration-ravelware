@@ -15,11 +15,11 @@ class ResourceController extends Controller
         ]);
     }
 
-    public function show(Resources $resource) {
-        return view('resource', [
-            'resource' => $resource
-        ]);
-    }
+    // public function show(Resources $resource) {
+    //     return view('resource', [
+    //         'resource' => $resource
+    //     ]);
+    // }
 
     public function incrementVisitors(Request $request, Resources $resource) {
         // Increment the visitors count for the page

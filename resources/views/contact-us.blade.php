@@ -47,7 +47,7 @@
               </div>
             </div>
             <div class="col-md-6 ps-5">
-              <form class="row" id='contactForm' action="{{ route('send.mail.post') }}" method="post">
+              <form class="row" id='contactForm' action="{{ route('send.mail.contact') }}" method="post">
                 @csrf
                 <div class="mb-5 col-md-6">
                   <label for="" class="form-label">Name</label>
@@ -69,9 +69,10 @@
                   <label for="" class="form-label">Company Size (Employees)</label>
                   <select class="form-select" name="size" id="size" aria-label="Default select example">
                     <option selected>Enter company size</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="1-50">1-50</option>
+                    <option value="51-250">51-250</option>
+                    <option value="251-1000">251-1000</option>
+                    <option value="1000++">1000+</option>
                   </select>
                 </div>
                 <div class="mb-5 col-md-6">
@@ -83,12 +84,8 @@
                   <input type="text" class="form-control" name="location" id="location" aria-describedby="" placeholder="Enter your company location">
                 </div>
                 <div class="mb-5 col-md-12">
-                  <label for="" class="form-label">Test Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject" aria-describedby="" placeholder="Enter your company location">
-                </div>
-                <div class="mb-5 col-md-12">
                   <label for="" class="form-label">Any Notes? (Optional)</label>
-                  <input type="text" class="form-control" name="body" id="body" aria-describedby="" placeholder="Enter your company location">
+                  <input type="text" class="form-control" name="notes" id="notes" aria-describedby="" placeholder="Enter your company location">
                 </div>
                 <div class="mb-5 col-md-12">
                   <div class="form-checkbox">

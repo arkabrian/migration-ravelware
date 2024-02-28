@@ -14,45 +14,47 @@
               <p>Our customer success team will gladly help you figure out how Worximity can empower you and your team with data that works. Tools to help you get more done.</p>
             </div>
             <div class="col-md-6 offset-md-1">
-              <div class="b-primary-20 p-4" id="">
+              <form class="b-primary-20 p-4" id="" action="{{ route('send.mail.consultation') }}" method="post">
+                @csrf
                 <h2 class="title title-md weight-700 mb-4">Your Information</h2>
                 <div class="d-flex justify-content-between">
-                  <input type="date" id="consult-date" name="consult-date">
-                  <input type="time" id="consult-time" name="consult-time">
+                  <input type="date" id="consult-date" name="consult_date">
+                  <input type="time" id="consult-time" name="consult_time">
                   <h4 class="title mb-0 weight-700 title-sm d-flex align-items-center"><img src="{{asset('img/icon/location.svg')}}" class="me-2">Zoom Meeting</h4>
                 </div>
                 <div class="contact-us mt-4">
                   <div class="row">
                     <div class="mb-4 col-md-6">
                       <label for="" class="form-label">First Name*</label>
-                      <input type="text" class="form-control" id="" aria-describedby="" placeholder="Your First Name">
+                      <input type="text" class="form-control" name="first_name" id="first_name" aria-describedby="" placeholder="Your First Name">
                     </div>
                     <div class="mb-4 col-md-6">
                       <label for="" class="form-label">Last Name*</label>
-                      <input type="text" class="form-control" id="" aria-describedby="" placeholder="Your Last Name">
+                      <input type="text" class="form-control" name="last_name" id="last_name" aria-describedby="" placeholder="Your Last Name">
                     </div>
                     <div class="mb-4 col-md-6">
                       <label for="" class="form-label">Email*</label>
-                      <input type="email" class="form-control" id="" aria-describedby="" placeholder="Your Email">
+                      <input type="email" class="form-control" name="email" id="email" aria-describedby="" placeholder="Your Email">
                     </div>
                     <div class="mb-4 col-md-6">
                       <label for="" class="form-label">Phone Number*</label>
-                      <input type="text" class="form-control" id="" aria-describedby="" placeholder="Your Phone Number">
+                      <input type="text" class="form-control" name="phone_number" id="phone_number" aria-describedby="" placeholder="Your Phone Number">
                     </div>
                     <div class="mb-5 col-md-12">
                       <label for="" class="form-label">Company Name</label>
-                      <input type="text" class="form-control" id="" aria-describedby="" placeholder="Your company Name">
+                      <input type="text" class="form-control" name="company" id="company" aria-describedby="" placeholder="Your company Name">
                     </div>
                     <div class="mb-5 col-md-12">
                       <label for="" class="form-label">Tell Us Your Needs</label>
                       <br>
-                      <select id="cars" name="carlist" form="carform">
-                        <option value="monitoring">Monitoring</option>
-                        <option value="analytics">Analytics</option>
-                        <option value="enterprise">Enterprise</option>
-                        <option value="sapu">Production Assurance By Optimization & Standardization (PA BOS)</option>
-                        <option value="general">General Consultation</option>
-                        <option value="others">Others</option>
+                      <select class="form-select" id="consult_type" name="consult_type" aria-label="Default select example">
+                        <option selected>Select your needs</option>
+                        <option value="Monitoring">Monitoring</option>
+                        <option value="Analytics">Analytics</option>
+                        <option value="Enterprise">Enterprise</option>
+                        <option value="PA BOS">Production Assurance By Optimization & Standardization (PA BOS)</option>
+                        <option value="General Consultation">General Consultation</option>
+                        <option value="Others">Others</option>
                       </select>
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
@@ -61,7 +63,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

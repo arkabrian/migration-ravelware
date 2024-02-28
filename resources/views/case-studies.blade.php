@@ -20,7 +20,7 @@
                   <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <button class="nav-link active" id="v-pills-01-tab" data-bs-toggle="pill" data-bs-target="#v-pills-01" type="button" role="tab" aria-controls="v-pills-01" aria-selected="true">All Case Study</button>
                     @foreach($case_studies->reverse() as $case_study)
-                    <a class="nav-link" id="v-pills-05-tab" href="case-study/{{$case_study['id']}}">{{$case_study['title']}}</a>
+                      <a class="nav-link" id="v-pills-05-tab" href="case-study/{{$case_study['id']}}">{{$case_study['title']}}</a>
                     @endforeach
                   </div>
                 </div>
